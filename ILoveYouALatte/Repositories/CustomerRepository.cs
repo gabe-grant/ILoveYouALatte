@@ -16,10 +16,10 @@ namespace ILoveYouALatte.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                        SELECT c.Id, C.CustFirebaseId, c.CustFirstName AS CustFirstName, c.CustLastName AS CustLastName, c.Email, c.UserTypeId,
-                               ut.Name AS UserTypeName
-                          FROM Customer c
-                               LEFT JOIN UserType ut on c.UserTypeId = ut.Id
+                        SELECT c.Id, C.CustFirebaseId, c.CustFirstName AS CustFirstName, c.CustLastName AS CustLastName, c.CustEmail, c.UserTypeId
+                               
+                          FROM Customers c
+                               
                          WHERE CustFirebaseId = @CustFirebaseId";
 
                     DbUtils.AddParameter(cmd, "@CustFirebaseId", custFirebaseId);
@@ -34,14 +34,9 @@ namespace ILoveYouALatte.Repositories
                             Id = DbUtils.GetInt(reader, "Id"),
                             CustFirebaseId = DbUtils.GetString(reader, "CustFirebaseId"),
                             CustFirstName = DbUtils.GetString(reader, "CustFirstName"),
-                            CustLastName = DbUtils.GetString(reader, "CustomerLastName"),
-                            CustEmail = DbUtils.GetString(reader, "Email"),
-                            UserTypeId = DbUtils.GetInt(reader, "UserTypeId"),
-                            UserType = new UserType()
-                            {
-                                Id = DbUtils.GetInt(reader, "UserTypeId"),
-                                Name = DbUtils.GetString(reader, "UserTypeName"),
-                            }
+                            CustLastName = DbUtils.GetString(reader, "CustLastName"),
+                            CustEmail = DbUtils.GetString(reader, "CustEmail"),
+                            UserTypeId = DbUtils.GetInt(reader, "UserTypeId")                 
                         };
                     }
                     reader.Close();

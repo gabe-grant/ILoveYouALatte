@@ -5,7 +5,7 @@ using ILoveYouALatte.Repositories;
 
 namespace ILoveYouALatte.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
