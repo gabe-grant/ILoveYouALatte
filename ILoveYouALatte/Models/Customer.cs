@@ -9,7 +9,7 @@ namespace ILoveYouALatte.Models
         [Required]
         [StringLength(28, MinimumLength = 28)]
         public string CustFirebaseId { get; set; }
-
+        
         [Required]
         [MaxLength(50)]
         public string CustFirstName { get; set; }

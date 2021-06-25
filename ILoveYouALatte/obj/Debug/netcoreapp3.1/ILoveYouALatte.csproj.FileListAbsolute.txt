@@ -3,7 +3,6 @@ C:\Users\User-39\workspace\NewForce-C4\Server-Side\ILoveYouALatte\ILoveYouALatte
 C:\Users\User-39\workspace\NewForce-C4\Server-Side\ILoveYouALatte\ILoveYouALatte\bin\Debug\netcoreapp3.1\client\iloveyoualatte\package-lock.json
 C:\Users\User-39\workspace\NewForce-C4\Server-Side\ILoveYouALatte\ILoveYouALatte\bin\Debug\netcoreapp3.1\client\iloveyoualatte\package.json
 C:\Users\User-39\workspace\NewForce-C4\Server-Side\ILoveYouALatte\ILoveYouALatte\bin\Debug\netcoreapp3.1\client\iloveyoualatte\public\manifest.json
-C:\Users\User-39\workspace\NewForce-C4\Server-Side\ILoveYouALatte\ILoveYouALatte\bin\Debug\netcoreapp3.1\client\package-lock.json
 C:\Users\User-39\workspace\NewForce-C4\Server-Side\ILoveYouALatte\ILoveYouALatte\bin\Debug\netcoreapp3.1\ILoveYouALatte.exe
 C:\Users\User-39\workspace\NewForce-C4\Server-Side\ILoveYouALatte\ILoveYouALatte\bin\Debug\netcoreapp3.1\ILoveYouALatte.deps.json
 C:\Users\User-39\workspace\NewForce-C4\Server-Side\ILoveYouALatte\ILoveYouALatte\bin\Debug\netcoreapp3.1\ILoveYouALatte.runtimeconfig.json
