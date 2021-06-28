@@ -16,21 +16,24 @@ export default function Login() {
       .catch(() => alert("Invalid email or password"));
   };
 
+  console.log("hello")
+
+ 
   return (
     
     <form onSubmit={loginSubmit}>
       <fieldset>
-        <formGroup>
-          <label for="email">Email</label>
+        <div>
+          <label htmlFor="email">Email</label>
           <input id="email" type="text" onChange={e => setEmail(e.target.value)} />
-        </formGroup>
-        <formGroup>
-          <label for="password">Password</label>
+        </div>
+        <div>
+          <label htmlFor="password">Password</label>
           <input id="password" type="password" onChange={e => setPassword(e.target.value)} />
-        </formGroup>
-        <formGroup>
+        </div>
+        <div>
           <button>Login</button>
-        </formGroup>
+        </div>
         <em>
           Not registered? <Link to="register">Register</Link>
         </em>

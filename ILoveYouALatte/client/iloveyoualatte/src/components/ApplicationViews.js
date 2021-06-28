@@ -13,7 +13,6 @@ export default function ApplicationViews() {
         <Route path="/login">
           <Login />
         </Route>
-
         {/* <Route path="/register">
           <Register />
         </Route> */}

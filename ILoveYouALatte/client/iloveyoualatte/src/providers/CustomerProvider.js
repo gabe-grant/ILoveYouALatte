@@ -5,12 +5,13 @@ import "firebase/auth";
 export const CustomerContext = createContext();
 
 export function CustomerProvider(props) {
-  const apiUrl = "/api/cusotmer";
+  const apiUrl = "/api/customer";
 
-  const cusotmer = sessionStorage.getItem("cusotmer");
-  const [isLoggedIn, setIsLoggedIn] = useState(cusotmer != null);
+  const customer = sessionStorage.getItem("customer");
+  const [isLoggedIn, setIsLoggedIn] = useState(customer != null);
 
   const [isFirebaseReady, setIsFirebaseReady] = useState(false);
+
   useEffect(() => {
     firebase.auth().onAuthStateChanged((u) => {
       setIsFirebaseReady(true);
@@ -35,7 +36,6 @@ export function CustomerProvider(props) {
   };
 
 
-  // Might need to change some things in this function
   const register = (customer, password) => {
     return firebase.auth().createUserWithEmailAndPassword(customer.email, password)
       .then((createResponse) => saveUser({ ...customer, firebaseUserId: createResponse.user.uid }))
@@ -71,8 +71,8 @@ export function CustomerProvider(props) {
 
   return (
     <CustomerContext.Provider value={{ isLoggedIn, login, logout, register, getToken }}>
-        if (isFirebaseReady){
-            props.children}
+      {/* {isFirebaseReady} */}
+      {props.children}
     </CustomerContext.Provider>
   );
 }
