@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { useHistory, Link } from "react-router-dom";
 import { CustomerContext } from "../providers/CustomerProvider";
 
+
 export default function Login() {
   const history = useHistory();
   const { login } = useContext(CustomerContext);
@@ -15,8 +16,6 @@ export default function Login() {
       .then(() => history.push("/"))
       .catch(() => alert("Invalid email or password"));
   };
-
-  console.log("hello")
 
  
   return (
