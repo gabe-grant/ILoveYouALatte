@@ -1,0 +1,8 @@
+.drink-box {
+    flex-basis: 28%;
+    margin: 1.5rem 1rem;
+    padding: 1em;
+    border: 4px solid gold;
+    border-style: double;
+    background-color: rgb(60, 179, 149);
+}

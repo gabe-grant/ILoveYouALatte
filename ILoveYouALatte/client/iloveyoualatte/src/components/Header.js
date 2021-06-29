@@ -5,14 +5,12 @@ import './Header.css';
 
 export default function Header() {
   const { isLoggedIn, logout } = useContext(CustomerContext);
-
-  
   
     return (
       <div>
         <nav>
           {isLoggedIn &&
-            <ul>
+            <ul className="loggedIn-nav">
               <li>
                 <Link aria-current="page" className="nav-link"
                   style={{ cursor: "pointer" }} onClick={logout}>Logout</Link>
@@ -20,13 +18,11 @@ export default function Header() {
             </ul>
           }
           {!isLoggedIn &&
-            <ul>
+            <ul className="loggedOut-nav">
               <li>
-                {/* <button onClick={()=> {history.push("/login")}}>Login</button> */}
                 <Link className="nav-link" to="/login">Login</Link>
               </li>
               <li>
-                {/* <button onClick={()=> {history.push("/login")}}>Login</button> */}
                 <Link className="nav-link" to="/register">Register</Link>
               </li>
             </ul>

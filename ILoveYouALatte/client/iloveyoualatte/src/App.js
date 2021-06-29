@@ -8,8 +8,8 @@ function App() {
   return (
     <Router>
        <CustomerProvider>
-         <ApplicationViews />
-         <Header /> 
+          <Header /> 
+          <ApplicationViews />
        </CustomerProvider>
     </Router>
   );

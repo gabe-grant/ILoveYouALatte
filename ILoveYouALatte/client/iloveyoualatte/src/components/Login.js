@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useHistory, Link } from "react-router-dom";
 import { CustomerContext } from "../providers/CustomerProvider";
+import './Header.css';
 
 
 export default function Login() {
@@ -20,13 +21,13 @@ export default function Login() {
  
   return (
     
-    <form onSubmit={loginSubmit}>
+    <form className="login-form" onSubmit={loginSubmit}>
       <fieldset>
-        <div>
+        <div className="login-input">
           <label htmlFor="email">Email</label>
           <input id="email" type="text" onChange={e => setEmail(e.target.value)} />
         </div>
-        <div>
+        <div className="login-input">
           <label htmlFor="password">Password</label>
           <input id="password" type="password" onChange={e => setPassword(e.target.value)} />
         </div>
