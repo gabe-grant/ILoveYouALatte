@@ -1,17 +1,8 @@
 ul {
     list-style: none;
-    
 }
 
-.login-form {
-    border: 2px black dotted;
-    display: grid;
-    place-items: center;
+#nav-bar {
+    border: black 1px dotted;
 }
 
-.loggedOut-nav, .loggedIn-nav {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-
-}

@@ -8,7 +8,7 @@ export default function Header() {
   
     return (
       <div>
-        <nav>
+        <nav id="nav-bar">
           {isLoggedIn &&
             <ul className="loggedIn-nav">
               <li>

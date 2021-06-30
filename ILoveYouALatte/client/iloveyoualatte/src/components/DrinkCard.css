@@ -1,8 +1,22 @@
+.drink-boxes {
+    display:flex;
+    
+}
+
+.drink-link {
+    flex: 33.33%;
+    
+}
+
 .drink-box {
-    flex-basis: 28%;
     margin: 1.5rem 1rem;
     padding: 1em;
     border: 4px solid gold;
     border-style: double;
     background-color: rgb(60, 179, 149);
+    
+}
+
+.drink-title {
+    text-align: center;
 }
