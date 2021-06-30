@@ -154,20 +154,22 @@ namespace ILoveYouALatte.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                        INSERT INTO DrinkOrder (Title, Content, ImageLocation, CategoryId, UserProfileId, CreateDateTime, PublishDateTime, IsApproved)
+                        INSERT INTO DrinkOrder (DrinkType, DrinkDescription, DrinkPrice, DrinkSize, MilkFoam, HotOrIced, MilkChoice, DrinkSyrup, DrinkSweetner, EspressoShots, Toppings)
                         OUTPUT INSERTED.ID
-                        VALUES (@Title, @Content, @ImageLocation, @CategoryId, @UserProfileId, @CreateDateTime, @PublishDateTime, @IsApproved)";
+                        VALUES (@DrinkType, @DrinkDescription, @DrinkPrice, @DrinkSize, @MilkFoam, @HotOrIced, @MilkChoice, @DrinkSyrup, @DrinkSweetner, @EspressoSHots, @Toppings)";
 
-                    DbUtils.AddParameter(cmd, "@Title", drinkOrder.Title);
-                    DbUtils.AddParameter(cmd, "@Content", drinkOrder.Content);
-                    DbUtils.AddParameter(cmd, "@ImageLocation", drinkOrder.ImageLocation);
-                    DbUtils.AddParameter(cmd, "@CategoryId", drinkOrder.CategoryId);
-                    DbUtils.AddParameter(cmd, "@UserProfileId", drinkOrder.UserProfileId);
-                    DbUtils.AddParameter(cmd, "@CreateDateTime", DateTime.Now);
-                    DbUtils.AddParameter(cmd, "@PublishDateTime", DateTime.Now);
-                    DbUtils.AddParameter(cmd, "@IsApproved", drinkOrder.IsApproved);
+                    DbUtils.AddParameter(cmd, "@DrinkType", drinkOrder.DrinkType);
+                    DbUtils.AddParameter(cmd, "@DrinkDescription", drinkOrder.DrinkDescription);
+                    DbUtils.AddParameter(cmd, "@DrinkPrice", drinkOrder.DrinkPrice);
+                    DbUtils.AddParameter(cmd, "@DrinkSize", drinkOrder.DrinkSize);
+                    DbUtils.AddParameter(cmd, "@HotOrIced", drinkOrder.HotOrIced);
+                    DbUtils.AddParameter(cmd, "@MilkChoice", drinkOrder.MilkChoice);
+                    DbUtils.AddParameter(cmd, "@DrinkSyrup", drinkOrder.DrinkSyrup);
+                    DbUtils.AddParameter(cmd, "@DrinkSweetner", drinkOrder.DrinkSweetner);
+                    DbUtils.AddParameter(cmd, "@EspressoShots", drinkOrder.EspressoShots);
+                    DbUtils.AddParameter(cmd, "@Toppings", drinkOrder.Toppings);
 
-                    post.Id = (int)cmd.ExecuteScalar();
+                    drinkOrder.Id = (int)cmd.ExecuteScalar();
                 }
             }
         }

@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using ILoveYouALatte.Models;
 
 
-namespace Tabloid.Repositories
+namespace ILoveYouALatte.Models
 {
-    public interface IDrinkRepository
+    public interface IDrinkOrderRepository
     {
         //List<DrinkOrder> GetAll();
         //DrinkOrder GetById(int id);

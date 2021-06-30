@@ -21,7 +21,6 @@ namespace ILoveYouALatte.Models
         [MaxLength(255)]
         public string CustEmail { get; set; }
 
-        [Required]
         public int UserTypeId { get; set; }
     }
 }

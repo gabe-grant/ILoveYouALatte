@@ -16,7 +16,7 @@ namespace ILoveYouALatte.Controllers
     [ApiController]
     public class DrinkOrderController : ControllerBase
     {
-        private readonly IDrinkOrderRepository _drinkOrderOrderRepository;
+        private readonly IDrinkOrderRepository _drinkOrderRepository;
         public DrinkOrderController(IDrinkOrderRepository drinkOrderRepository)
         {
             _drinkOrderRepository = drinkOrderRepository;
