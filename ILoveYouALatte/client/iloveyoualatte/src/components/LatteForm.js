@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react"
-import { DrinkOrderContext } from "./DrinkOrderProvider"
-import "./Latte.css"
+import { DrinkOrderContext } from "../providers/DrinkOrderProvider"
+import "./LatteForm.css"
 import { useHistory, useParams } from 'react-router-dom';
 
-export const PlantForm = () => {
+export const LatteForm = () => {
     const { addDrinkOrder } = useContext(DrinkOrderContext)
 
     const [latte, setLatte] = useState({})
@@ -66,7 +66,7 @@ export const PlantForm = () => {
             <div className="drink-from-group">
               <label htmlFor="drinkSize">What size?: </label>
               <select id="drinkSize" name="DrinkSize" required className="drink-form-control"
-              onChange={handleControlledInputChange}/>
+              onChange={handleControlledInputChange}>
                 <option></option>
                 <option></option>
                 <option></option>
@@ -77,7 +77,7 @@ export const PlantForm = () => {
             <div className="drink-from-group">
               <label htmlFor="hotOrIced">Hot or iced?</label>
               <select id="hotOrIced" name="HotOrIced" required className="drink-form-control"
-              onChange={handleControlledInputChange}/>
+              onChange={handleControlledInputChange}>
                 <option></option>
                 <option></option>
               </select>
@@ -87,7 +87,7 @@ export const PlantForm = () => {
             <div className="drink-from-group">
               <label htmlFor="milkChoice">Choice of milk: </label>
               <select id="milkChoice" name="MilkChoice" required className="drink-form-control"
-              onChange={handleControlledInputChange}/>
+              onChange={handleControlledInputChange}>
                 <option></option>
                 <option></option>
                 <option></option>
@@ -99,7 +99,7 @@ export const PlantForm = () => {
             <div className="drink-from-group">
               <label htmlFor="milkFoam">Milk foam: </label>
               <select id="milkFoam" name="MilkFoam" required className="drink-form-control"
-              onChange={handleControlledInputChange}/>
+              onChange={handleControlledInputChange}>
                 <option></option>
                 <option></option>
                 <option></option>
@@ -111,7 +111,7 @@ export const PlantForm = () => {
             <div className="drink-from-group">
               <label htmlFor="drinkSyrup">Any syrup?: </label>
               <select id="drinkSyrup" name="DrinkSyrup" required className="drink-form-control"
-              onChange={handleControlledInputChange}/>
+              onChange={handleControlledInputChange}>
                 <option></option>
                 <option></option>
                 <option></option>
@@ -125,7 +125,7 @@ export const PlantForm = () => {
             <div className="drink-from-group">
               <label htmlFor="drinkSweetner">Any sweetner?: </label>
               <select id="drinkSweetner" name="DrinkSweetner" required className="drink-form-control"
-              onChange={handleControlledInputChange}/>
+              onChange={handleControlledInputChange}>
                 <option></option>
                 <option></option>
                 <option></option>
@@ -137,7 +137,7 @@ export const PlantForm = () => {
             <div className="drink-from-group">
               <label htmlFor="espressoShots">Add espressso shots?: </label>
               <select id="espressoShots" name="EspressoShots" required className="drink-form-control"
-              onChange={handleControlledInputChange}/>
+              onChange={handleControlledInputChange}>
                 <option></option>
                 <option></option>
                 <option></option>
@@ -149,7 +149,7 @@ export const PlantForm = () => {
             <div className="drink-from-group">
               <label htmlFor="toppings">Top it off: </label>
               <select id="toppings" name="Toppings" required className="drink-form-control"
-              onChange={handleControlledInputChange}/>
+              onChange={handleControlledInputChange}>
                 <option></option>
                 <option></option>
                 <option></option>

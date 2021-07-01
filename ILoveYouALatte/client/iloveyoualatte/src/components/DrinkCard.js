@@ -11,7 +11,7 @@ export const DrinkCard = () => {
   
   return (
     <div className="drink-boxes">
-      <Link className="drink-link" style={{ color: 'inherit', textDecoration: 'inherit'}} to="/test">
+      <Link className="drink-link" style={{ color: 'inherit', textDecoration: 'inherit'}} to="/latte">
         <section className="drink-box">
           <p className="drink-title">Latte</p>
           <img alt="a latte" src={picture_of_a_latte} width="100%" height="100%" />

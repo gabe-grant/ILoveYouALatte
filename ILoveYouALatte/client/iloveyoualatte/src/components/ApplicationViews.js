@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import { CustomerContext } from "../providers/CustomerProvider";
 import Login from "./Login";
 import { DrinkCard } from "./DrinkCard";
+import { LatteForm } from './LatteForm'
 
 
 export default function ApplicationViews() {
@@ -14,7 +15,12 @@ export default function ApplicationViews() {
         <Route path="/login">
           <Login />
         </Route>
-        <DrinkCard />
+        <Route exact path="/">
+          <DrinkCard />
+        </Route>
+        <Route exact path="/latte">
+          <LatteForm />
+        </Route>
       </Switch>
     </main>
   );
