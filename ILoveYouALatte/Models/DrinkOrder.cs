@@ -9,9 +9,6 @@ namespace ILoveYouALatte.Models
     {
 
         public int Id { get; set; }
-        public string DrinkType { get; set; }
-        public string DrinkDescription { get; set; }
-        public int DrinkPrice { get; set; }
         public string DrinkSize { get; set; }
         public string MilkFoam { get; set; }
         public string HotOrIced { get; set; }
