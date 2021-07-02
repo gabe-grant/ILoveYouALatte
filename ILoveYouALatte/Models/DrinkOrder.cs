@@ -7,7 +7,6 @@ namespace ILoveYouALatte.Models
 {
     public class DrinkOrder
     {
-
         public int Id { get; set; }
         public string DrinkSize { get; set; }
         public string MilkFoam { get; set; }
@@ -17,6 +16,7 @@ namespace ILoveYouALatte.Models
         public string DrinkSweetner { get; set; }
         public int EspressoShots { get; set; }
         public string Toppings { get; set; }
+        public Customer CustId { get; set; }
 
     }
 }

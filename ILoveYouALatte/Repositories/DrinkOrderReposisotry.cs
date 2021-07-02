@@ -156,11 +156,12 @@ namespace ILoveYouALatte.Repositories
                     cmd.CommandText = @"
                         INSERT INTO DrinkOrder (DrinkSize, MilkFoam, HotOrIced, MilkChoice, DrinkSyrup, DrinkSweetner, EspressoShots, Toppings)
                         OUTPUT INSERTED.ID
-                        VALUES (@DrinkSize, @MilkFoam, @HotOrIced, @MilkChoice, @DrinkSyrup, @DrinkSweetner, @EspressoSHots, @Toppings)";
+                        VALUES (@DrinkSize, @MilkFoam, @HotOrIced, @MilkChoice, @DrinkSyrup, @DrinkSweetner, @EspressoShots, @Toppings)";
 
                     DbUtils.AddParameter(cmd, "@DrinkSize", drinkOrder.DrinkSize);
                     DbUtils.AddParameter(cmd, "@HotOrIced", drinkOrder.HotOrIced);
                     DbUtils.AddParameter(cmd, "@MilkChoice", drinkOrder.MilkChoice);
+                    DbUtils.AddParameter(cmd, "@MilkFoam", drinkOrder.MilkFoam);
                     DbUtils.AddParameter(cmd, "@DrinkSyrup", drinkOrder.DrinkSyrup);
                     DbUtils.AddParameter(cmd, "@DrinkSweetner", drinkOrder.DrinkSweetner);
                     DbUtils.AddParameter(cmd, "@EspressoShots", drinkOrder.EspressoShots);

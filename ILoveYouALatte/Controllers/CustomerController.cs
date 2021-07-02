@@ -31,7 +31,7 @@ namespace ILoveYouALatte.Controllers
         public IActionResult Register(Customer customer)
         {
             // All newly registered users start out as a "user" user type (i.e. they are not admins)
-            customer.UserTypeId = UserType.USER_TYPE_ID;
+            
             _customerRepository.Add(customer);
             return CreatedAtAction(
                 nameof(GetByFirebaseUserId), new { custFirebaseId = customer.CustFirebaseId }, customer);

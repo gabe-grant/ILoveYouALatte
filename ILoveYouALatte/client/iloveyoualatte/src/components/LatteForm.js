@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import Select from 'react-select';
 
 export const LatteForm = () => {
-    const { addDrinkOrder } = useContext(DrinkOrderContext)
+    const { drinkorder, setDrinkOrder, addDrinkOrder } = useContext(DrinkOrderContext)
 
     const [latte, setLatte] = useState({
       DrinkSize: "",
@@ -37,14 +37,14 @@ export const LatteForm = () => {
         //disable the button - no extra clicks to fuck shit up
         setIsLoading(true);
         addDrinkOrder({
-              DrinkSize: latte.drinkSize, 
-              HotOrIced: latte.hotOrIced,
-              MilkChoice: latte.milkChoice,
-              MilkFoam: latte.milkFoam,
-              DrinkSyrup: latte.drinkSyrup,
-              DrinkSweetner: latte.drinkSweetner,
-              EspressoShots: +latte.espressoShots,
-              Toppings: latte.toppings
+              DrinkSize: latte.DrinkSize, 
+              HotOrIced: latte.HotOrIced,
+              MilkChoice: latte.MilkChoice,
+              MilkFoam: latte.MilkFoam,
+              DrinkSyrup: latte.DrinkSyrup,
+              DrinkSweetner: latte.DrinkSweetner,
+              EspressoShots: latte.EspressoShots,
+              Toppings: latte.Toppings
           })
           //pushes a new entry onto the history stack
           .then(() => history.push("/"))
@@ -69,9 +69,9 @@ export const LatteForm = () => {
               <select id="drinkSize" name="DrinkSize" required className="drink-form-control"
               onChange={handleControlledInputChange}>
                 <option>Select a size...</option>
-                <option>12oz.</option>
-                <option>16oz.</option>
-                <option>20oz.</option>
+                <option>12oz</option>
+                <option>16oz</option>
+                <option>20oz</option>
                 </select>
             </div>
           </fieldset>
