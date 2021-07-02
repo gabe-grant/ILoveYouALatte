@@ -14,6 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ILoveYouALatte.Models;
 
 namespace ILoveYouALatte
 {
@@ -31,6 +32,7 @@ namespace ILoveYouALatte
         {
 
             services.AddTransient<ICustomerRepository, CustomerRepository>();
+            services.AddTransient<IDrinkOrderRepository, DrinkOrderRepository>();
 
             var firebaseProjectId = Configuration.GetValue<string>("FirebaseProjectId");
             var googleTokenUrl = $"https://securetoken.google.com/{firebaseProjectId}";
