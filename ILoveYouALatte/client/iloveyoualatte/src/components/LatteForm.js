@@ -15,7 +15,8 @@ export const LatteForm = () => {
       DrinkSyrup: "",
       DrinkSweetner: "",
       EspressoShots: 0,
-      Toppings: ""
+      Toppings: "",
+      CustId: ""
     })
 
     const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +29,9 @@ export const LatteForm = () => {
       newLatte[event.target.name] = event.target.value
       setLatte(newLatte)
     }
+
+
+    const customerId = JSON.parse(sessionStorage.getItem("customer")).id
 
     const handleSubmitDrinkOrder = () => {
       
@@ -44,7 +48,8 @@ export const LatteForm = () => {
               DrinkSyrup: latte.DrinkSyrup,
               DrinkSweetner: latte.DrinkSweetner,
               EspressoShots: latte.EspressoShots,
-              Toppings: latte.Toppings
+              Toppings: latte.Toppings,
+              CustId: +customerId
           })
           //pushes a new entry onto the history stack
           .then(() => history.push("/"))
