@@ -44,7 +44,7 @@ namespace ILoveYouALatte.Controllers
         public IActionResult DrinkOrder(DrinkOrder drinkOrder)
         {
             _drinkOrderRepository.Add(drinkOrder);
-            return CreatedAtAction("Get", new { id = drinkOrder.Id }, drinkOrder);
+            return NoContent();
         }
 
         //[HttpDelete("{id}")]

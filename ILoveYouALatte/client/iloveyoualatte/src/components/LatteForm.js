@@ -14,7 +14,7 @@ export const LatteForm = () => {
       MilkFoam: "",
       DrinkSyrup: "",
       DrinkSweetner: "",
-      EspressoShots: "",
+      EspressoShots: 0,
       Toppings: ""
     })
 

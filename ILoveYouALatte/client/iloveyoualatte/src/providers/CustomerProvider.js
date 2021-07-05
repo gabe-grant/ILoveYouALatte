@@ -5,7 +5,7 @@ import "firebase/auth";
 export const CustomerContext = createContext();
 
 export function CustomerProvider(props) {
-  const apiUrl = "/api/customer";
+  const apiUrl = "api/customer";
 
   const customer = sessionStorage.getItem("customer");
   const [isLoggedIn, setIsLoggedIn] = useState(customer != null);
