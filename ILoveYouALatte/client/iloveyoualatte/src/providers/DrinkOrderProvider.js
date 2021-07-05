@@ -23,11 +23,21 @@ export const DrinkOrderProvider = (props) => {
          })
         )};
 
+    const getAllDrinkOrders = () =>
+        getToken().then((token) =>  
+          fetch("/api/drinkorder", {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
+          }).then(res => res.json())
+          .then(setDrinkOrder));
+
     
     
     return (
         <DrinkOrderContext.Provider value={{
-           drinkorder, addDrinkOrder
+           drinkorder, addDrinkOrder, getAllDrinkOrders
         }}>
             {props.children}
         </DrinkOrderContext.Provider>

@@ -9,7 +9,7 @@ namespace ILoveYouALatte.Models
 {
     public interface IDrinkOrderRepository
     {
-        //List<DrinkOrder> GetAll();
+        List<DrinkOrder> GetAll();
         //DrinkOrder GetById(int id);
         //void Delete(int id);
         //List<DrinkOrder> GetAllDrinksByUser(int userProfileId);

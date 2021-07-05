@@ -71,8 +71,9 @@ export function CustomerProvider(props) {
 
   return (
     <CustomerContext.Provider value={{ isLoggedIn, login, logout, register, getToken }}>
-      {/* {isFirebaseReady} */}
-      {props.children}
+      {isFirebaseReady
+        ? props.children
+        : <p>Loading...</p>}
     </CustomerContext.Provider>
   );
 }

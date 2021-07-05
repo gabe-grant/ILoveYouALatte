@@ -14,56 +14,47 @@ namespace ILoveYouALatte.Repositories
     {
         public DrinkOrderRepository(IConfiguration configuration) : base(configuration) { }
 
-        //public List<DrinkOrder> GetAll()
-        //{
-        //    using (var conn = Connection)
-        //    {
-        //        conn.Open();
-        //        using (var cmd = conn.CreateCommand())
-        //        {
-        //            cmd.CommandText = @"
+        public List<DrinkOrder> GetAll()
+        {
+            using (var conn = Connection)
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"
        
-        //            SELECT p.id AS Id, p.Title, p.CategoryId AS DrinkCategoryId,
-        //            p.PublishDateTime, p.UserProfileId AS DrinkUserProfileId,
-                    
-        //            up.FirstName,
+                    SELECT Id, DrinkSize, MilkFoam, HotOrIced, MilkChoice, DrinkSyrup, DrinkSweetner, EspressoShots, Toppings
 
-        //            c.Name
-        //            FROM Drink p
-        //            LEFT JOIN Category c on p.CategoryId = c.Id
-        //            LEFT JOIN UserProfile up ON p.UserProfileId = up.id
-        //            ORDER BY PublishDateTime";
+                    FROM DrinkOrder";
 
-        //            var reader = cmd.ExecuteReader();
+                    var reader = cmd.ExecuteReader();
 
-        //            var drinks = new List<DrinkOrder>();
-        //            while (reader.Read())
-        //            {
-        //                drinks.Add(new DrinkOrder()
-        //                {
-        //                    Id = DbUtils.GetInt(reader, "Id"),
-        //                    Title = DbUtils.GetString(reader, "Title"),
-        //                    PublishDateTime = DbUtils.GetDateTime(reader, "PublishDateTime"),
-        //                    UserProfileId = DbUtils.GetInt(reader, "DrinkUserProfileId"),
-        //                    UserProfile = new UserProfile()
-        //                    {
-        //                        Id = DbUtils.GetInt(reader, "DrinkUserProfileId"),
-        //                        FirstName = DbUtils.GetString(reader, "FirstName"),
-        //                    },
-        //                    Category = new Category()
-        //                    {
-        //                        Id = DbUtils.GetInt(reader, "DrinkCategoryId"),
-        //                        Name = DbUtils.GetString(reader, "Name")
-        //                    }
-        //                }); ;
-        //            }
+                    var drinkorders = new List<DrinkOrder>();
+                    while (reader.Read())
+                    {
+                        drinkorders.Add(new DrinkOrder()
+                        {
+                            Id = DbUtils.GetInt(reader, "Id"),
+                            DrinkSize = DbUtils.GetString(reader, "DrinkSize"),
+                            MilkFoam = DbUtils.GetString(reader, "MilkFoam"),
+                            HotOrIced = DbUtils.GetString(reader, "HotOrIced"),
+                            MilkChoice = DbUtils.GetString(reader, "MilkChoice"),
+                            DrinkSyrup = DbUtils.GetString(reader, "DrinkSyrup"),
+                            DrinkSweetner = DbUtils.GetString(reader, "DrinkSweetner"),
+                            EspressoShots = DbUtils.GetInt(reader, "EspressoShots"),
+                            Toppings = DbUtils.GetString(reader, "Toppings")
 
-        //            reader.Close();
+                            //PublishDateTime = DbUtils.GetDateTime(reader, "PublishDateTime"),
 
-        //            return drinks;
-        //        }
-        //    }
-        //}
+                        }); ;
+                    }
+
+                    reader.Close();
+
+                    return drinkorders;
+                }
+            }
+        }
 
 
         //public List<DrinkOrder> GetAllDrinksByUser(int userProfileId)

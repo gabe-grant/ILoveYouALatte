@@ -22,11 +22,11 @@ namespace ILoveYouALatte.Controllers
             _drinkOrderRepository = drinkOrderRepository;
         }
 
-        //[HttpGet]
-        //public IActionResult Get()
-        //{
-        //    return Ok(_drinkOrderRepository.GetAll());
-        //}
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(_drinkOrderRepository.GetAll());
+        }
 
 
         //[HttpGet("{id}")]

@@ -12,6 +12,9 @@ export default function Header() {
           {isLoggedIn &&
             <ul className="loggedIn-nav">
               <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
                 <Link aria-current="page" className="nav-link"
                   style={{ cursor: "pointer" }} onClick={logout}>Logout</Link>
               </li>
