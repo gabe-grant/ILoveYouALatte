@@ -5,7 +5,7 @@ import { useHistory, useParams } from 'react-router-dom';
 
 
 export const LatteForm = () => {
-    const { addDrinkOrder, getDrinkOrder } = useContext(DrinkOrderContext)
+    const { addDrinkOrder, getDrinkOrder, updateDrinkOrder } = useContext(DrinkOrderContext)
 
     const [latte, setLatte] = useState({
       DrinkSize: "",
@@ -40,22 +40,39 @@ export const LatteForm = () => {
       } else {
         //disable the button - no extra clicks to fuck shit up
         setIsLoading(true);
-        addDrinkOrder({
-              DrinkSize: latte.DrinkSize, 
-              HotOrIced: latte.HotOrIced,
-              MilkChoice: latte.MilkChoice,
-              MilkFoam: latte.MilkFoam,
-              DrinkSyrup: latte.DrinkSyrup,
-              DrinkSweetner: latte.DrinkSweetner,
-              EspressoShots: latte.EspressoShots,
-              Toppings: latte.Toppings,
-              CustId: +customerId
+        if (drinkOrderId){
+          //"PUT" method from the context provider -UPDATE
+          updateDrinkOrder({
+                Id: latte.id,
+                DrinkSize: latte.drinkSize, 
+                HotOrIced: latte.hotOrIced,
+                MilkChoice: latte.milkChoice,
+                MilkFoam: latte.milkFoam,
+                DrinkSyrup: latte.drinkSyrup,
+                DrinkSweetner: latte.drinkSweetner,
+                EspressoShots: latte.espressoShots,
+                Toppings: latte.toppings,
+                CustId: +customerId
           })
           //pushes a new entry onto the history stack
-          .then(() => history.push("/"))
+          .then(() => history.push(`/history`))
+        } else {
+          addDrinkOrder({
+                DrinkSize: latte.drinkSize, 
+                HotOrIced: latte.hotOrIced,
+                MilkChoice: latte.milkChoice,
+                MilkFoam: latte.milkFoam,
+                DrinkSyrup: latte.drinkSyrup,
+                DrinkSweetner: latte.drinkSweetner,
+                EspressoShots: latte.rspressoShots,
+                Toppings: latte.toppings,
+                CustId: +customerId
+            })
+            //pushes a new entry onto the history stack
+            .then(() => history.push("/"))
+          }
         }
-      }
-    
+      } 
 
     useEffect(() => {
       if (drinkOrderId){
@@ -78,7 +95,7 @@ export const LatteForm = () => {
           <fieldset>
             <div className="drink-from-group">
               <label htmlFor="drinkSize">What size?: </label>
-              <select id="drinkSize" name="DrinkSize" required className="drink-form-control"
+              <select id="drinkSize" name="drinkSize" required className="drink-form-control"
               onChange={handleControlledInputChange}
               value={latte.drinkSize}>
                 <option>Select a size...</option>
@@ -91,7 +108,7 @@ export const LatteForm = () => {
           <fieldset>
             <div className="drink-from-group">
               <label htmlFor="hotOrIced">Hot or iced?</label>
-              <select id="hotOrIced" name="HotOrIced" required className="drink-form-control"
+              <select id="hotOrIced" name="hotOrIced" required className="drink-form-control"
               onChange={handleControlledInputChange}
               value={latte.hotOrIced}>
                 <option>Select one...</option>
@@ -103,7 +120,7 @@ export const LatteForm = () => {
           <fieldset>
             <div className="drink-from-group">
               <label htmlFor="milkChoice">Choice of milk: </label>
-              <select id="milkChoice" name="MilkChoice" required className="drink-form-control"
+              <select id="milkChoice" name="milkChoice" required className="drink-form-control"
               onChange={handleControlledInputChange}
               value={latte.milkChoice}>
                 <option>Select a milk...</option>
@@ -120,7 +137,7 @@ export const LatteForm = () => {
           <fieldset>
             <div className="drink-from-group">
               <label htmlFor="milkFoam">Milk foam: </label>
-              <select id="milkFoam" name="MilkFoam" required className="drink-form-control"
+              <select id="milkFoam" name="milkFoam" required className="drink-form-control"
               onChange={handleControlledInputChange}
               value={latte.milkFoam}>
                 <option>Milk foam options...</option>
@@ -133,7 +150,7 @@ export const LatteForm = () => {
           <fieldset>
             <div className="drink-from-group">
               <label htmlFor="drinkSyrup">Any syrup?: </label>
-              <select id="drinkSyrup" name="DrinkSyrup" required className="drink-form-control"
+              <select id="drinkSyrup" name="drinkSyrup" required className="drink-form-control"
               onChange={handleControlledInputChange}
               value={latte.drinkSyrup}>
                 <option>Select a syrup...</option>
@@ -155,7 +172,7 @@ export const LatteForm = () => {
           <fieldset>
             <div className="drink-from-group">
               <label htmlFor="drinkSweetner">Any sweetner?: </label>
-              <select id="drinkSweetner" name="DrinkSweetner" required className="drink-form-control"
+              <select id="drinkSweetner" name="drinkSweetner" required className="drink-form-control"
               onChange={handleControlledInputChange}
               value={latte.drinkSweetner}>
                 <option>Select a sweetner...</option>
@@ -169,7 +186,7 @@ export const LatteForm = () => {
           <fieldset>
             <div className="drink-from-group">
               <label htmlFor="espressoShots">Add espressso shots?: </label>
-              <select id="espressoShots" name="EspressoShots" required className="drink-form-control"
+              <select id="espressoShots" name="espressoShots" required className="drink-form-control"
               onChange={handleControlledInputChange}
               value={latte.espressoShots}>
                 <option>Additional shots...</option>
@@ -182,7 +199,7 @@ export const LatteForm = () => {
           <fieldset>
             <div className="drink-from-group">
               <label htmlFor="toppings">Top it off: </label>
-              <select id="toppings" name="Toppings" required className="drink-form-control"
+              <select id="toppings" name="toppings" required className="drink-form-control"
               onChange={handleControlledInputChange}
               value={latte.toppings}>
                 <option>Select a topping...</option>
@@ -198,7 +215,8 @@ export const LatteForm = () => {
             onClick={event => {
               event.preventDefault() // Prevent browser from submitting the form and refreshing the page
               handleSubmitDrinkOrder()
-            }}>{addDrinkOrder}Order here</button>
+            }}>
+              {drinkOrderId ? <>Update Order</> : <>Order Here</>}</button>
         </form>
       </section>
       

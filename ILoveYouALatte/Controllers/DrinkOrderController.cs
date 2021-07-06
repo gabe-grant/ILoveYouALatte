@@ -63,17 +63,17 @@ namespace ILoveYouALatte.Controllers
         //    return Ok(drinkOrders);
         //}
 
-        //[HttpPut("{id}")]
-        //public IActionResult Put(int id, DrinkOrder drinkOrder)
-        //{
-        //    if (id != drinkOrder.Id)
-        //    {
-        //        return BadRequest();
-        //    }
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, DrinkOrder drinkOrder)
+        {
+            if (id != drinkOrder.Id)
+            {
+                return BadRequest();
+            }
 
-        //    _drinkOrderRepository.Update(drinkOrder);
-        //    return Ok(drinkOrder);
-        //}
+            _drinkOrderRepository.Update(drinkOrder);
+            return Ok(drinkOrder);
+        }
 
         //private int GetCurrentUserProfileId()
         //{

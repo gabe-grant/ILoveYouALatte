@@ -13,7 +13,7 @@ namespace ILoveYouALatte.Models
         DrinkOrder GetById(int id);
         //void Delete(int id);
         //List<DrinkOrder> GetAllDrinksByUser(int userProfileId);
-        //void Update(DrinkOrder drinkOrder);
+        void Update(DrinkOrder drinkOrder);
         void Add(DrinkOrder drinkOrder);
     }
 }

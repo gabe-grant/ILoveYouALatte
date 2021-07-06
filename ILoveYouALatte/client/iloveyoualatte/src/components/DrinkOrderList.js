@@ -1,25 +1,23 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { DrinkOrderContext } from "../providers/DrinkOrderProvider";
 import Latte from "./Latte";
 
 
 export const DrinkOrderList = () => {
-  const { drinkorder, getAllDrinkOrders } = useContext(DrinkOrderContext);
+  const { drinkorders, getAllDrinkOrders } = useContext(DrinkOrderContext);
 
   useEffect(() => {
-    getAllDrinkOrders();
+    getAllDrinkOrders()
   }, []);
 
   return (
-
         <div>
-          {drinkorder.map((drinkorders) => (
+          {drinkorders.map((order) => (
             <>
-                <Latte key={drinkorders.id} drinkorders={drinkorders} />
+              <Latte key={order.id} order={order} />
             </>
           ))}
         </div>
-
   );
 };
 

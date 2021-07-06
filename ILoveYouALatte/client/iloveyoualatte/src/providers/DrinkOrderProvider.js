@@ -7,7 +7,7 @@ export const DrinkOrderContext = createContext()
 
 export const DrinkOrderProvider = (props) => {
 
-    const [drinkorder, setDrinkOrder] = useState([])
+    const [drinkorders, setDrinkOrders] = useState([])
     const { getToken } = useContext(CustomerContext);
 
 
@@ -31,7 +31,7 @@ export const DrinkOrderProvider = (props) => {
               Authorization: `Bearer ${token}`
             }
           }).then(res => res.json())
-          .then(setDrinkOrder));
+          .then(setDrinkOrders));
 
     const getDrinkOrder = (id) => {
       return getToken().then((token) => 
@@ -43,11 +43,23 @@ export const DrinkOrderProvider = (props) => {
         }).then((res) => res.json()))
     }
 
+    const updateDrinkOrder = (drinkorder) => {
+      return getToken().then((token) =>
+        fetch(`/api/drinkorder/${drinkorder.Id}`, {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+        },
+            body: JSON.stringify(drinkorder),
+        })
+          .then(getAllDrinkOrders))};
+
     
-    
+
     return (
         <DrinkOrderContext.Provider value={{
-           drinkorder, addDrinkOrder, getAllDrinkOrders, getDrinkOrder
+           drinkorders, addDrinkOrder, getAllDrinkOrders, getDrinkOrder, updateDrinkOrder
         }}>
             {props.children}
         </DrinkOrderContext.Provider>

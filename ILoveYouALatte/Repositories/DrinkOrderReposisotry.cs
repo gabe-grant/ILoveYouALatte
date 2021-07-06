@@ -212,55 +212,57 @@ namespace ILoveYouALatte.Repositories
         }
 
 
-        //public void Update(DrinkOrder post)
-        //{
-        //    using (var conn = Connection)
-        //    {
-        //        conn.Open();
-        //        using (var cmd = conn.CreateCommand())
-        //        {
-        //            cmd.CommandText = @"
-        //                UPDATE Drink
-        //                   SET Title = @Title,
-        //                       Content = @Content,
-        //                       CreateDateTime = @CreateDateTime,
-        //                       IsApproved = @IsApproved,
-        //                       PublishDateTime = @PublishDateTime,
-        //                       ImageLocation = @ImageLocation,
-        //                       CategoryId = @CategoryId,
-        //                       UserProfileId = @UserProfileId
-        //                 WHERE Id = @Id";
+        public void Update(DrinkOrder post)
+        {
+            using (var conn = Connection)
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"
+                        UPDATE DrinkOrder
+                           SET DrinkSize = @DrinkSize,
+                               HotOrIced = @HotOrIced,
+                               MilkChoice = @MilkChoice,
+                               MilkFoam = @MilkFoam,
+                               DrinkSyrup = @DrinkSyrup,
+                               DrinkSweetner = @DrinkSweetner,
+                               EspressoShots = @EspressoShots,
+                               Toppings = @Toppings,
+                               CustId = @CustId
+                         WHERE Id = @Id";
 
-        //            DbUtils.AddParameter(cmd, "@CategoryId", post.CategoryId);
-        //            DbUtils.AddParameter(cmd, "@Content", post.Content);
-        //            DbUtils.AddParameter(cmd, "@CreateDateTime", post.CreateDateTime);
-        //            DbUtils.AddParameter(cmd, "@Title", post.Title);
-        //            DbUtils.AddParameter(cmd, "@ImageLocation", post.ImageLocation);
-        //            DbUtils.AddParameter(cmd, "@PublishDateTime", post.PublishDateTime);
-        //            DbUtils.AddParameter(cmd, "@IsApproved", post.IsApproved);
-        //            DbUtils.AddParameter(cmd, "@UserProfileId", post.UserProfileId);
-        //            DbUtils.AddParameter(cmd, "@Id", post.Id);
+                    DbUtils.AddParameter(cmd, "@EspressoShots", post.EspressoShots);
+                    DbUtils.AddParameter(cmd, "@HotOrIced", post.HotOrIced);
+                    DbUtils.AddParameter(cmd, "@MilkChoice", post.MilkChoice);
+                    DbUtils.AddParameter(cmd, "@DrinkSize", post.DrinkSize);
+                    DbUtils.AddParameter(cmd, "@DrinkSweetner", post.DrinkSweetner);
+                    DbUtils.AddParameter(cmd, "@DrinkSyrup", post.DrinkSyrup);
+                    DbUtils.AddParameter(cmd, "@MilkFoam", post.MilkFoam);
+                    DbUtils.AddParameter(cmd, "@Toppings", post.Toppings);
+                    DbUtils.AddParameter(cmd, "@CustId", post.CustId);
+                    DbUtils.AddParameter(cmd, "@Id", post.Id);
 
-        //            cmd.ExecuteNonQuery();
-        //        }
-        //    }
-        //}
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
 
-        //public void Delete(int id)
-        //{
-        //    using (var conn = Connection)
-        //    {
-        //        conn.Open();
-        //        using (var cmd = conn.CreateCommand())
-        //        {
-        //            cmd.CommandText = @"DELETE FROM Drink WHERE Id = @Id
-        //                                Delete from Comment where DrinkId = @DrinkId";
-        //            DbUtils.AddParameter(cmd, "@id", id);
-        //            DbUtils.AddParameter(cmd, "@DrinkId", id);
-        //            cmd.ExecuteNonQuery();
-        //        }
-        //    }
-        //}
+        public void Delete(int id)
+        {
+            using (var conn = Connection)
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"DELETE FROM Drink WHERE Id = @Id
+                                        Delete from Comment where DrinkId = @DrinkId";
+                    DbUtils.AddParameter(cmd, "@id", id);
+                    DbUtils.AddParameter(cmd, "@DrinkId", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
 
     };
 }

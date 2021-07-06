@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import Login from "./Login";
 // import { Link } from "react-router-dom";
 
-const Latte = ({ drinkorders }) => {
+const Latte = ({ order }) => {
   
   const customerId = JSON.parse(sessionStorage.getItem("customer")).id;
   const history = useHistory();
@@ -12,21 +12,21 @@ const Latte = ({ drinkorders }) => {
   return ( 
     <section>
         <div>
-          {drinkorders.custId === customerId ? (
+          {order.custId === customerId ? (
             <>
-              <p>{drinkorders.drinkSize}</p>
-              <p>{drinkorders.hotOrIced}</p>
-              <p>{drinkorders.milkChoice}</p>
-              <p>{drinkorders.milkFoam}</p>
-              <p>{drinkorders.drinkSyrup}</p>
-              <p>{drinkorders.drinkSweetner}</p>
-              <p>{drinkorders.espressoShots}</p>
-              <p>{drinkorders.toppings}</p>
+              <p>{order.drinkSize}</p>
+              <p>{order.hotOrIced}</p>
+              <p>{order.milkChoice}</p>
+              <p>{order.milkFoam}</p>
+              <p>{order.drinkSyrup}</p>
+              <p>{order.drinkSweetner}</p>
+              <p>{order.espressoShots}</p>
+              <p>{order.toppings}</p>
               <button onClick={() => {
-                history.push(`/delete/${drinkorders.id}`)
+                history.push(`/delete/${order.id}`)
               }}>Delete Order</button>
               <button onClick={() => {
-                history.push(`/edit/${drinkorders.id}`)
+                history.push(`/edit/${order.id}`)
               }}>Edit Order</button>
             </>
           ) : (
