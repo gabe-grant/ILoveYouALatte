@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useState } from "react"
 import { DrinkOrderContext } from "../providers/DrinkOrderProvider"
 import "./LatteForm.css"
 import { useHistory } from 'react-router-dom';
-import Select from 'react-select';
+
 
 export const LatteForm = () => {
-    const { drinkorder, setDrinkOrder, addDrinkOrder } = useContext(DrinkOrderContext)
+    const { addDrinkOrder } = useContext(DrinkOrderContext)
 
     const [latte, setLatte] = useState({
       DrinkSize: "",
@@ -72,7 +72,8 @@ export const LatteForm = () => {
             <div className="drink-from-group">
               <label htmlFor="drinkSize">What size?: </label>
               <select id="drinkSize" name="DrinkSize" required className="drink-form-control"
-              onChange={handleControlledInputChange}>
+              onChange={handleControlledInputChange}
+              defaultValue={latte.DrinkSize}>
                 <option>Select a size...</option>
                 <option>12oz</option>
                 <option>16oz</option>

@@ -15,6 +15,9 @@ export default function Header() {
                 <Link to="/">Home</Link>
               </li>
               <li>
+                <Link to="/history">Order History</Link>
+              </li>
+              <li>
                 <Link aria-current="page" className="nav-link"
                   style={{ cursor: "pointer" }} onClick={logout}>Logout</Link>
               </li>

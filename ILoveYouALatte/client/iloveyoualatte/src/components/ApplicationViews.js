@@ -26,9 +26,13 @@ export default function ApplicationViews() {
           {isLoggedIn ? <LatteForm /> : <Redirect to="/login" />}
         </Route>
 
-        <Route path="/list" exact>
+        <Route path="/history" exact>
           {isLoggedIn ? <DrinkOrderList /> : <Redirect to="/login" />}
         </Route>
+
+        <Route path="/edit/:drinkOrderId(\d+)">
+            {isLoggedIn ? <LatteForm /> : <Redirect to="/login" />}
+          </Route>
 
       </Switch>
     </main>
