@@ -64,7 +64,7 @@ export const LatteForm = () => {
                 MilkFoam: latte.milkFoam,
                 DrinkSyrup: latte.drinkSyrup,
                 DrinkSweetner: latte.drinkSweetner,
-                EspressoShots: latte.rspressoShots,
+                EspressoShots: latte.espressoShots,
                 Toppings: latte.toppings,
                 CustId: +customerId
             })
