@@ -23,7 +23,7 @@ namespace ILoveYouALatte.Repositories
                 {
                     cmd.CommandText = @"
        
-                    SELECT Id, DrinkSize, MilkFoam, HotOrIced, MilkChoice, DrinkSyrup, DrinkSweetner, EspressoShots, Toppings
+                    SELECT Id, DrinkSize, MilkFoam, HotOrIced, MilkChoice, DrinkSyrup, DrinkSweetner, EspressoShots, Toppings, CustId
 
                     FROM DrinkOrder";
 
@@ -41,8 +41,9 @@ namespace ILoveYouALatte.Repositories
                             MilkChoice = DbUtils.GetString(reader, "MilkChoice"),
                             DrinkSyrup = DbUtils.GetString(reader, "DrinkSyrup"),
                             DrinkSweetner = DbUtils.GetString(reader, "DrinkSweetner"),
-                            EspressoShots = DbUtils.GetInt(reader, "EspressoShots"),
-                            Toppings = DbUtils.GetString(reader, "Toppings")
+                            EspressoShots = DbUtils.GetString(reader, "EspressoShots"),
+                            Toppings = DbUtils.GetString(reader, "Toppings"),
+                            CustId = DbUtils.GetInt(reader, "CustId")
 
                             //PublishDateTime = DbUtils.GetDateTime(reader, "PublishDateTime"),
 

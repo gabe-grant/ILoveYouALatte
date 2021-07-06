@@ -1,19 +1,28 @@
 import React from "react";
+import Login from "./Login";
 // import { Link } from "react-router-dom";
 
 const Latte = ({ drinkorders }) => {
-  return (
-   
+  
+  const customerId = JSON.parse(sessionStorage.getItem("customer")).id
+  
+  return ( 
     <section>
         <div>
-            <p>{drinkorders.DrinkSize}</p>
-            <p>{drinkorders.HotOrIced}</p>
-            <p>{drinkorders.MilkChoice}</p>
-            <p>{drinkorders.MilkFoam}</p>
-            <p>{drinkorders.DrinkSyrup}</p>
-            <p>{drinkorders.DrinkSweetner}</p>
-            <p>{drinkorders.EspressoShots}</p>
-            <p>{drinkorders.Toppings}</p>
+          {drinkorders.custId === customerId ? (
+            <>
+              <p>{drinkorders.drinkSize}</p>
+              <p>{drinkorders.hotOrIced}</p>
+              <p>{drinkorders.milkChoice}</p>
+              <p>{drinkorders.milkFoam}</p>
+              <p>{drinkorders.drinkSyrup}</p>
+              <p>{drinkorders.drinkSweetner}</p>
+              <p>{drinkorders.espressoShots}</p>
+              <p>{drinkorders.toppings}</p>
+            </>
+          ) : (
+           <Login />
+          )}  
         </div>
     </section>
   );

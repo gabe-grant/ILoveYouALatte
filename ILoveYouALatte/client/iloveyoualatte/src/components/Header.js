@@ -26,7 +26,7 @@ export default function Header() {
                 <Link className="nav-link" to="/login">Login</Link>
               </li>
               <li>
-                <Link className="nav-link" to="/register">Register</Link>
+                <Link className="nav-link" to="/login">Register</Link>
               </li>
             </ul>
           }

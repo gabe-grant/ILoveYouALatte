@@ -12,9 +12,8 @@ export const DrinkOrderList = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="cards-column">
+
+        <div>
           {drinkorder.map((drinkorders) => (
             <>
                 <Latte key={drinkorders.id} drinkorders={drinkorders} />
@@ -22,8 +21,7 @@ export const DrinkOrderList = () => {
             </>
           ))}
         </div>
-      </div>
-    </div>
+        
   );
 };
 

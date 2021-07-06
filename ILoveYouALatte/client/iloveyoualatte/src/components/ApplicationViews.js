@@ -23,7 +23,7 @@ export default function ApplicationViews() {
         </Route>
 
         <Route exact path="/latte">
-          <LatteForm />
+          {isLoggedIn ? <LatteForm /> : <Redirect to="/login" />}
         </Route>
 
         <Route path="/list" exact>
