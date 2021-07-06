@@ -10,7 +10,7 @@ namespace ILoveYouALatte.Models
     public interface IDrinkOrderRepository
     {
         List<DrinkOrder> GetAll();
-        //DrinkOrder GetById(int id);
+        DrinkOrder GetById(int id);
         //void Delete(int id);
         //List<DrinkOrder> GetAllDrinksByUser(int userProfileId);
         //void Update(DrinkOrder drinkOrder);

@@ -165,62 +165,51 @@ namespace ILoveYouALatte.Repositories
             }
         }
 
-        //public DrinkOrder GetById(int id)
-        //{
-        //    using (var conn = Connection)
-        //    {
-        //        conn.Open();
-        //        using (var cmd = conn.CreateCommand())
-        //        {
-        //            cmd.CommandText = @"
-        //            SELECT p.Id AS DrinkId, p.Title, p.ImageLocation, p.Content, p.CreateDateTime, 
-        //                p.PublishDateTime, p.IsApproved, p.CategoryId, p.UserProfileId,
-        //                up.Id AS UserProfileId, up.FirebaseUserId, up.DisplayName, up.FirstName, 
-        //                up.LastName, up.Email,
-        //                up.CreateDateTime, up.ImageLocation, up.UserTypeId
-        //            FROM Drink p
-        //            LEFT JOIN UserProfile up ON p.UserProfileId = up.id
-        //            WHERE p.Id = @id";
+        public DrinkOrder GetById(int id)
+        {
+            using (var conn = Connection)
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"
+                    SELECT do.Id AS Id, do.DrinkSize, do.HotOrIced, do.MilkChoice, do.MilkFoam, do.DrinkSyrup, do.DrinkSweetner, do.EspressoShots, do.Toppings, do.CustId
 
-        //            DbUtils.AddParameter(cmd, "@Id", id);
+                    FROM DrinkOrder do
 
-        //            var reader = cmd.ExecuteReader();
+                    WHERE do.Id = @id";
 
-        //            DrinkOrder post = null;
-        //            if (reader.Read())
-        //            {
-        //                post = new DrinkOrder()
-        //                {
-        //                    Id = id,
-        //                    Title = DbUtils.GetString(reader, "Title"),
-        //                    ImageLocation = DbUtils.GetString(reader, "ImageLocation"),
-        //                    Content = DbUtils.GetString(reader, "Content"),
-        //                    CreateDateTime = DbUtils.GetDateTime(reader, "CreateDateTime"),
-        //                    PublishDateTime = DbUtils.GetDateTime(reader, "PublishDateTime"),
-        //                    IsApproved = DbUtils.GetBool(reader, "IsApproved"),
-        //                    CategoryId = DbUtils.GetInt(reader, "CategoryId"),
-        //                    UserProfileId = DbUtils.GetInt(reader, "UserProfileId"),
-        //                    UserProfile = new UserProfile()
-        //                    {
-        //                        Id = DbUtils.GetInt(reader, "UserProfileId"),
-        //                        FirebaseUserId = DbUtils.GetString(reader, "FirebaseUserId"),
-        //                        DisplayName = DbUtils.GetString(reader, "DisplayName"),
-        //                        FirstName = DbUtils.GetString(reader, "FirstName"),
-        //                        LastName = DbUtils.GetString(reader, "LastName"),
-        //                        Email = DbUtils.GetString(reader, "Email"),
-        //                        CreateDateTime = DbUtils.GetDateTime(reader, "CreateDateTime"),
-        //                        ImageLocation = DbUtils.GetString(reader, "ImageLocation"),
-        //                        UserTypeId = DbUtils.GetInt(reader, "UserTypeId")
-        //                    },
-        //                };
-        //            }
+                    DbUtils.AddParameter(cmd, "@Id", id);
 
-        //            reader.Close();
+                    var reader = cmd.ExecuteReader();
 
-        //            return post;
-        //        }
-        //    }
-        //}
+                    DrinkOrder post = null;
+                    if (reader.Read())
+                    {
+                        post = new DrinkOrder()
+                        {
+                            Id = id,
+                            DrinkSize = DbUtils.GetString(reader, "DrinkSize"),
+                            HotOrIced = DbUtils.GetString(reader, "HotOrIced"),
+                            MilkChoice = DbUtils.GetString(reader, "MilkChoice"),
+                            MilkFoam = DbUtils.GetString(reader, "MilkFoam"),
+                            DrinkSyrup = DbUtils.GetString(reader, "DrinkSyrup"),
+                            DrinkSweetner = DbUtils.GetString(reader, "DrinkSweetner"),
+                            EspressoShots = DbUtils.GetString(reader, "EspressoShots"),
+                            Toppings = DbUtils.GetString(reader, "Toppings"),
+                            CustId = DbUtils.GetInt(reader, "CustId")
+
+                            //PublishDateTime = DbUtils.GetDateTime(reader, "PublishDateTime"),
+
+                        };
+                    }
+
+                    reader.Close();
+
+                    return post;
+                }
+            }
+        }
 
 
         //public void Update(DrinkOrder post)

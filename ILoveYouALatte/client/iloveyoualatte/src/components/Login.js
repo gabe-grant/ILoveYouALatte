@@ -35,7 +35,7 @@ export default function Login() {
           <button>Login</button>
         </div>
         <em>
-          Not registered? <Link to="register">Register</Link>
+          Not registered? <Link to="/latte">Register</Link>
         </em>
       </fieldset>
     </form>

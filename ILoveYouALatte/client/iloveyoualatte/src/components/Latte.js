@@ -7,7 +7,7 @@ const Latte = ({ drinkorders }) => {
   
   const customerId = JSON.parse(sessionStorage.getItem("customer")).id;
   const history = useHistory();
-  const {drinkOrderId} = useParams();
+  
   
   return ( 
     <section>

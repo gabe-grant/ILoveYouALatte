@@ -29,16 +29,16 @@ namespace ILoveYouALatte.Controllers
         }
 
 
-        //[HttpGet("{id}")]
-        //public IActionResult Get(int id)
-        //{
-        //    var drinkOrder = _drinkOrderRepository.GetById(id);
-        //    if (drinkOrder == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return Ok(drinkOrder);
-        //}
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            var drinkOrder = _drinkOrderRepository.GetById(id);
+            if (drinkOrder == null)
+            {
+                return NotFound();
+            }
+            return Ok(drinkOrder);
+        }
 
         [HttpPost]
         public IActionResult DrinkOrder(DrinkOrder drinkOrder)

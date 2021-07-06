@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react"
 import { DrinkOrderContext } from "../providers/DrinkOrderProvider"
 import "./LatteForm.css"
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 
 export const LatteForm = () => {
-    const { addDrinkOrder } = useContext(DrinkOrderContext)
+    const { addDrinkOrder, getDrinkOrder } = useContext(DrinkOrderContext)
 
     const [latte, setLatte] = useState({
       DrinkSize: "",
@@ -20,7 +20,7 @@ export const LatteForm = () => {
     })
 
     const [isLoading, setIsLoading] = useState(true);
-    
+    const {drinkOrderId} = useParams();
 	  const history = useHistory();
 
     const handleControlledInputChange = (event) => {
@@ -58,8 +58,15 @@ export const LatteForm = () => {
     
 
     useEffect(() => {
-        setLatte(latte)
-        setIsLoading(false)  
+      if (drinkOrderId){
+        getDrinkOrder(drinkOrderId)
+        .then(latte => {
+            setLatte(latte)
+            setIsLoading(false)
+        })
+      } else {
+        setIsLoading(false)
+      }
       }, [])
 
 
@@ -73,7 +80,7 @@ export const LatteForm = () => {
               <label htmlFor="drinkSize">What size?: </label>
               <select id="drinkSize" name="DrinkSize" required className="drink-form-control"
               onChange={handleControlledInputChange}
-              defaultValue={latte.DrinkSize}>
+              value={latte.drinkSize}>
                 <option>Select a size...</option>
                 <option>12oz</option>
                 <option>16oz</option>
@@ -85,7 +92,8 @@ export const LatteForm = () => {
             <div className="drink-from-group">
               <label htmlFor="hotOrIced">Hot or iced?</label>
               <select id="hotOrIced" name="HotOrIced" required className="drink-form-control"
-              onChange={handleControlledInputChange}>
+              onChange={handleControlledInputChange}
+              value={latte.hotOrIced}>
                 <option>Select one...</option>
                 <option>Hot</option>
                 <option>Iced</option>
@@ -96,7 +104,8 @@ export const LatteForm = () => {
             <div className="drink-from-group">
               <label htmlFor="milkChoice">Choice of milk: </label>
               <select id="milkChoice" name="MilkChoice" required className="drink-form-control"
-              onChange={handleControlledInputChange}>
+              onChange={handleControlledInputChange}
+              value={latte.milkChoice}>
                 <option>Select a milk...</option>
                 <option>Whole</option>
                 <option>2%</option>
@@ -112,7 +121,8 @@ export const LatteForm = () => {
             <div className="drink-from-group">
               <label htmlFor="milkFoam">Milk foam: </label>
               <select id="milkFoam" name="MilkFoam" required className="drink-form-control"
-              onChange={handleControlledInputChange}>
+              onChange={handleControlledInputChange}
+              value={latte.milkFoam}>
                 <option>Milk foam options...</option>
                 <option>No Foam</option>
                 <option>Light Foam</option>
@@ -124,7 +134,8 @@ export const LatteForm = () => {
             <div className="drink-from-group">
               <label htmlFor="drinkSyrup">Any syrup?: </label>
               <select id="drinkSyrup" name="DrinkSyrup" required className="drink-form-control"
-              onChange={handleControlledInputChange}>
+              onChange={handleControlledInputChange}
+              value={latte.drinkSyrup}>
                 <option>Select a syrup...</option>
                 <option>Vanilla</option>
                 <option>Caramel</option>
@@ -145,7 +156,8 @@ export const LatteForm = () => {
             <div className="drink-from-group">
               <label htmlFor="drinkSweetner">Any sweetner?: </label>
               <select id="drinkSweetner" name="DrinkSweetner" required className="drink-form-control"
-              onChange={handleControlledInputChange}>
+              onChange={handleControlledInputChange}
+              value={latte.drinkSweetner}>
                 <option>Select a sweetner...</option>
                 <option>Stevia</option>
                 <option>Honey</option>
@@ -158,7 +170,8 @@ export const LatteForm = () => {
             <div className="drink-from-group">
               <label htmlFor="espressoShots">Add espressso shots?: </label>
               <select id="espressoShots" name="EspressoShots" required className="drink-form-control"
-              onChange={handleControlledInputChange}>
+              onChange={handleControlledInputChange}
+              value={latte.espressoShots}>
                 <option>Additional shots...</option>
                 <option>1</option>
                 <option>2</option>
@@ -170,7 +183,8 @@ export const LatteForm = () => {
             <div className="drink-from-group">
               <label htmlFor="toppings">Top it off: </label>
               <select id="toppings" name="Toppings" required className="drink-form-control"
-              onChange={handleControlledInputChange}>
+              onChange={handleControlledInputChange}
+              value={latte.toppings}>
                 <option>Select a topping...</option>
                 <option>Cinnamon Powder</option>
                 <option>Chocolate Powder</option>
