@@ -1,0 +1,21 @@
+#entire-drink-form {
+    border: black 1px dotted;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.drink-form {
+    border: black 1px dotted;
+    flex: auto;
+    flex-direction: column;
+    margin: auto 35%; 
+    padding: 1.5%;
+}
+
+#drink-order-btn {
+    display: display;
+    justify-content: right;
+    
+}

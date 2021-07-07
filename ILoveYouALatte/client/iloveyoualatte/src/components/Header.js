@@ -1,14 +1,25 @@
-import React, { useState, useContext, useHistory } from 'react';
+import React, { useState, useContext, useHistory, useEffect } from 'react';
 import { CustomerContext } from "../providers/CustomerProvider";
+import { DrinkOrderContext } from '../providers/DrinkOrderProvider';
 import { Link } from "react-router-dom"
 import './Header.css';
 
 export default function Header() {
   const { isLoggedIn, logout } = useContext(CustomerContext);
+  const { getAllDrinkOrders, drinkorders } = useContext(DrinkOrderContext);
+  
+
+  useEffect(() => {
+    getAllDrinkOrders()
+  }, [])
   
     return (
       <div>
+        
         <nav id="nav-bar">
+          <section>
+            {drinkorders.length * 10}
+          </section>
           {isLoggedIn &&
             <ul className="loggedIn-nav">
               <li>
