@@ -58,86 +58,6 @@ namespace ILoveYouALatte.Repositories
         }
 
 
-        //public List<DrinkOrder> GetAllDrinksByUser(int userProfileId)
-        //{
-        //    // this method goes into the DB and pulls out the values of the drinks made by the user
-        //    using (var conn = Connection)
-        //    {
-        //        conn.Open();
-        //        using (var cmd = conn.CreateCommand())
-        //        {
-        //            cmd.CommandText = @"
-        //               SELECT p.Id, p.Title, p.Content, 
-        //                      p.ImageLocation AS HeaderImage,
-        //                      p.CreateDateTime, p.PublishDateTime, p.IsApproved,
-        //                      p.CategoryId, p.UserProfileId,
-        //                      c.[Name] AS CategoryName,
-        //                      u.FirstName, u.LastName, u.DisplayName, 
-        //                      u.Email, u.CreateDateTime, u.ImageLocation AS AvatarImage,
-        //                      u.UserTypeId, 
-        //                      ut.[Name] AS UserTypeName
-        //                 FROM Drink p
-        //                      LEFT JOIN Category c ON p.CategoryId = c.id
-        //                      LEFT JOIN UserProfile u ON p.UserProfileId = u.id
-        //                      LEFT JOIN UserType ut ON u.UserTypeId = ut.id
-        //                WHERE p.UserProfileId = @userProfileId";
-
-        //            cmd.Parameters.AddWithValue("@userProfileId", userProfileId);
-        //            var reader = cmd.ExecuteReader();
-
-        //            // storing those value in a new list of type post
-        //            var drinks = new List<DrinkOrder>();
-
-        //            while (reader.Read())
-        //            {
-
-        //                drinks.Add(NewDrinkFromReader(reader));
-        //            }
-
-        //            reader.Close();
-
-        //            return drinks;
-        //        }
-        //    }
-        //}
-
-        //public DrinkOrder NewDrinkFromReader(SqlDataReader reader)
-        //{
-        //    // there is a DbUtils.GetNullableDateTime available for PublishDateTime that errored
-        //    return new DrinkOrder()
-        //    {
-        //        Id = reader.GetInt32(reader.GetOrdinal("Id")),
-        //        Title = reader.GetString(reader.GetOrdinal("Title")),
-        //        Content = reader.GetString(reader.GetOrdinal("Content")),
-        //        ImageLocation = DbUtils.GetNullableString(reader, "HeaderImage"),
-        //        CreateDateTime = reader.GetDateTime(reader.GetOrdinal("CreateDateTime")),
-        //        PublishDateTime = DbUtils.GetDateTime(reader, "PublishDateTime"),
-        //        CategoryId = reader.GetInt32(reader.GetOrdinal("CategoryId")),
-        //        Category = new Category()
-        //        {
-        //            Id = reader.GetInt32(reader.GetOrdinal("CategoryId")),
-        //            Name = reader.GetString(reader.GetOrdinal("CategoryName"))
-        //        },
-        //        UserProfileId = reader.GetInt32(reader.GetOrdinal("UserProfileId")),
-        //        UserProfile = new UserProfile()
-        //        {
-        //            Id = reader.GetInt32(reader.GetOrdinal("UserProfileId")),
-        //            FirstName = reader.GetString(reader.GetOrdinal("FirstName")),
-        //            LastName = reader.GetString(reader.GetOrdinal("LastName")),
-        //            DisplayName = reader.GetString(reader.GetOrdinal("DisplayName")),
-        //            Email = reader.GetString(reader.GetOrdinal("Email")),
-        //            CreateDateTime = reader.GetDateTime(reader.GetOrdinal("CreateDateTime")),
-        //            ImageLocation = DbUtils.GetNullableString(reader, "AvatarImage"),
-        //            UserTypeId = reader.GetInt32(reader.GetOrdinal("UserTypeId")),
-        //            UserType = new UserType()
-        //            {
-        //                Id = reader.GetInt32(reader.GetOrdinal("UserTypeId")),
-        //                Name = reader.GetString(reader.GetOrdinal("UserTypeName"))
-        //            }
-        //        }
-        //    };
-        //}
-
         public void Add(DrinkOrder drinkOrder)
         {
             using (var conn = Connection)
@@ -255,10 +175,9 @@ namespace ILoveYouALatte.Repositories
                 conn.Open();
                 using (var cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = @"DELETE FROM Drink WHERE Id = @Id
-                                        Delete from Comment where DrinkId = @DrinkId";
+                    cmd.CommandText = @"DELETE FROM DrinkOrder WHERE Id = @Id";
+
                     DbUtils.AddParameter(cmd, "@id", id);
-                    DbUtils.AddParameter(cmd, "@DrinkId", id);
                     cmd.ExecuteNonQuery();
                 }
             }

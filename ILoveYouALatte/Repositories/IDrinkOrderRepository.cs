@@ -11,8 +11,7 @@ namespace ILoveYouALatte.Models
     {
         List<DrinkOrder> GetAll();
         DrinkOrder GetById(int id);
-        //void Delete(int id);
-        //List<DrinkOrder> GetAllDrinksByUser(int userProfileId);
+        void Delete(int id);
         void Update(DrinkOrder drinkOrder);
         void Add(DrinkOrder drinkOrder);
     }

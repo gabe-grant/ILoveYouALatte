@@ -5,6 +5,7 @@ import Login from "./Login";
 import { DrinkCard } from "./DrinkCard";
 import { DrinkOrderList } from './DrinkOrderList'
 import { LatteForm } from './LatteForm'
+import { DrinkOrderDelete } from './DrinkOrderDelete'
 
 
 export default function ApplicationViews() {
@@ -31,8 +32,12 @@ export default function ApplicationViews() {
         </Route>
 
         <Route path="/edit/:drinkOrderId(\d+)">
-            {isLoggedIn ? <LatteForm /> : <Redirect to="/login" />}
-          </Route>
+          {isLoggedIn ? <LatteForm /> : <Redirect to="/login" />}
+        </Route>
+
+        <Route path="/delete/:orderId">
+          {isLoggedIn ? <DrinkOrderDelete /> : <Redirect to="/login" />}
+        </Route>
 
       </Switch>
     </main>

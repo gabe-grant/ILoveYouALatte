@@ -47,21 +47,12 @@ namespace ILoveYouALatte.Controllers
             return NoContent();
         }
 
-        //[HttpDelete("{id}")]
-        //public IActionResult Delete(int id)
-        //{
-        //    _drinkOrderRepository.Delete(id);
-        //    return NoContent();
-        //}
-
-        // That is is passed here and then this controller method is invoked
-        //[HttpGet("currentUser={id}")]
-        //public IActionResult AllDrinkOrdersByUser(int id)
-        //{
-        //    // GetAllDrinksByUser method is called on drinkOrder repository
-        //    var drinkOrders = _drinkOrderRepository.GetAllDrinkOrdersByUser(id);
-        //    return Ok(drinkOrders);
-        //}
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _drinkOrderRepository.Delete(id);
+            return NoContent();
+        }
 
         [HttpPut("{id}")]
         public IActionResult Put(int id, DrinkOrder drinkOrder)
@@ -74,12 +65,6 @@ namespace ILoveYouALatte.Controllers
             _drinkOrderRepository.Update(drinkOrder);
             return Ok(drinkOrder);
         }
-
-        //private int GetCurrentUserProfileId()
-        //{
-        //    string id = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        //    return int.Parse(id);
-        //}
 
     }
 }
