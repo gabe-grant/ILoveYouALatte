@@ -18,7 +18,7 @@ export default function Header() {
         
         <nav id="nav-bar">
           <section>
-            {drinkorders.length * 10}
+            {isLoggedIn ? drinkorders.length * 10 : <></>}
           </section>
           {isLoggedIn &&
             <ul className="loggedIn-nav">

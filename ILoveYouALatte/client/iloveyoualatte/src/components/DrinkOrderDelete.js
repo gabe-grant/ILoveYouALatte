@@ -23,7 +23,7 @@ export const DrinkOrderDelete = () => {
 
   return (
     <div>
-      <p>Are you sure you want to delete {order.id}?</p>
+      <p>Are you sure you want to delete this order?</p>
       <button onClick={handleDelete}>Confirm Delete</button>
       <button onClick={() => {
         history.push("/history")
