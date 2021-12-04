@@ -1,0 +1,199 @@
+﻿++Solution 'ILoveYouALatte' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:ILoveYouALatte.sln
+++ILoveYouALatte
+i:{00000000-0000-0000-0000-000000000000}:ILoveYouALatte
+++Connected Services 
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:>655
+++Dependencies
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:>657
+++Analyzers
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:analyzers
+++Frameworks
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:frameworks
+++Packages
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:packages
+++Properties
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\properties\
+++client
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\
+++iloveyoualatte
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\
+++public
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\public\
+++src
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\
+++.env
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\.env
+++.gitignore
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\.gitignore
+++package.json
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\package.json
+++README.md
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\readme.md
+++Controllers
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\controllers\
+++CustomerController.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\controllers\customercontroller.cs
+++DrinkOrderController.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\controllers\drinkordercontroller.cs
+++WeatherForecastController.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\controllers\weatherforecastcontroller.cs
+++Models
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\models\
+++Customer.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\models\customer.cs
+++DrinkOrder.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\models\drinkorder.cs
+++Repositories
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\repositories\
+++BaseRepository.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\repositories\baserepository.cs
+++CustomerRepository.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\repositories\customerrepository.cs
+++DrinkOrderReposisotry.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\repositories\drinkorderreposisotry.cs
+++ICustomerRepository.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\repositories\icustomerrepository.cs
+++IDrinkOrderRepository.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\repositories\idrinkorderrepository.cs
+++Utils
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\utils\
+++DbUtils.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\utils\dbutils.cs
+++appsettings.json
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\appsettings.json
+++appsettings.Development.json
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\appsettings.development.json
+++Program.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\program.cs
+++Startup.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\startup.cs
+++WeatherForecast.cs
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\weatherforecast.cs
+++No service dependencies discovered
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:>656
+++Microsoft.AspNetCore.Analyzers
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.App
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\microsoft.netcore.app
+++Microsoft.AspNetCore.Authentication.JwtBearer (3.1.16)
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:>680
+++Microsoft.Data.SqlClient (3.0.0)
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:>677
+++Microsoft.OpenApi (1.2.3)
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:>679
+++launchSettings.json
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\properties\launchsettings.json
+++favicon.ico
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\public\favicon.ico
+++index.html
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\public\index.html
+++logo192.png
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\public\logo192.png
+++logo512.png
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\public\logo512.png
+++manifest.json
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\public\manifest.json
+++robots.txt
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\public\robots.txt
+++assets
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\assets\
+++components
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\
+++providers
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\providers\
+++App.css
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\app.css
+++App.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\app.js
+++index.css
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\index.css
+++index.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\index.js
+++logo.svg
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\logo.svg
+++reportWebVitals.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\reportwebvitals.js
+++setupTests.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\setuptests.js
+++package-lock.json
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\package-lock.json
+++images
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\assets\images\
+++ApplicationViews.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\applicationviews.js
+++DrinkCard.css
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\drinkcard.css
+++DrinkCard.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\drinkcard.js
+++DrinkOrderDelete.css
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\drinkorderdelete.css
+++DrinkOrderDelete.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\drinkorderdelete.js
+++DrinkOrderList.css
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\drinkorderlist.css
+++DrinkOrderList.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\drinkorderlist.js
+++Header.css
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\header.css
+++Header.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\header.js
+++Latte.css
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\latte.css
+++Latte.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\latte.js
+++LatteForm.css
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\latteform.css
+++LatteForm.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\latteform.js
+++Login.css
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\login.css
+++Login.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\components\login.js
+++CustomerProvider.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\providers\customerprovider.js
+++DrinkOrderProvider.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\providers\drinkorderprovider.js
+++App.test.js
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\app.test.js
+++picture_of_a_frappe.jpg
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\assets\images\picture_of_a_frappe.jpg
+++picture_of_a_latte.jpg
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\assets\images\picture_of_a_latte.jpg
+++picture_of_cold_brew.jpg
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\users\bultaqi\workspace\iloveyoualatte\iloveyoualatte\client\iloveyoualatte\src\assets\images\picture_of_cold_brew.jpg
+++ILoveYouALatte (unloaded)
+++Solution 'ILoveYouALatte' ‎(0 projects)
+++ILoveYouALatte (load failed)
+++Solution 'ILoveYouALatte' ‎(0 of 1 project)
+++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk.Web\analyzers\cs\Microsoft.AspNetCore.Analyzers.dll
+++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk.Web\analyzers\cs\Microsoft.AspNetCore.Components.Analyzers.dll
+++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk.Web\analyzers\cs\Microsoft.AspNetCore.Mvc.Analyzers.dll
+++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll
+++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.NetAnalyzers.dll
+++Microsoft.AspNetCore.JsonPatch (6.0.0)
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:>678
+++Microsoft.Extensions.Caching.Abstractions (6.0.0)
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:>676
+++Microsoft.AspNetCore.App.Analyzers
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{aec83aac-083d-4cff-a360-7373b60d081f}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
