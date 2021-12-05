@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bultaqi\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj": {}
+    "C:\\Users\\bulta\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bultaqi\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj": {
+    "C:\\Users\\bulta\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bultaqi\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
+        "projectUniqueName": "C:\\Users\\bulta\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
         "projectName": "ILoveYouALatte",
-        "projectPath": "C:\\Users\\bultaqi\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
-        "packagesPath": "C:\\Users\\bultaqi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bultaqi\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\obj\\",
+        "projectPath": "C:\\Users\\bulta\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
+        "packagesPath": "C:\\Users\\bulta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bulta\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bultaqi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bulta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

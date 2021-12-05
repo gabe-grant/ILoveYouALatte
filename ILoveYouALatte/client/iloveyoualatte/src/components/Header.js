@@ -8,10 +8,6 @@ export default function Header() {
   const { isLoggedIn, logout } = useContext(CustomerContext);
   const { getAllDrinkOrders, drinkorders } = useContext(DrinkOrderContext);
   
-
-  useEffect(() => {
-    getAllDrinkOrders()
-  }, [])
   
     return (
       <div>

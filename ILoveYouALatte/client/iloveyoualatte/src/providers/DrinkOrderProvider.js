@@ -23,8 +23,8 @@ export const DrinkOrderProvider = (props) => {
          })
         )};
 
-    const getAllDrinkOrders = () =>
-        getToken().then((token) =>  
+    const getAllDrinkOrders = () => {
+        return getToken().then((token) =>  
           fetch("/api/drinkorder", {
             method: "GET",
             headers: {
@@ -32,6 +32,7 @@ export const DrinkOrderProvider = (props) => {
             }
           }).then(res => res.json())
           .then(setDrinkOrders));
+    }
 
     const getDrinkOrder = (id) => {
       return getToken().then((token) => 
