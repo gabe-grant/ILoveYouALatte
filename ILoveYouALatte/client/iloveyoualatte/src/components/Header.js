@@ -8,6 +8,10 @@ export default function Header() {
   const { isLoggedIn, logout } = useContext(CustomerContext);
   const { getAllDrinkOrders, drinkorders } = useContext(DrinkOrderContext);
   
+
+  // "ConnectionStrings": {
+  //   "DefaultConnection": "server=localhost\\SQLExpress;database=ILoveYouALatte;integrated security=true;"
+  // },
   
     return (
       <div>

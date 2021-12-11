@@ -13,7 +13,7 @@ export const LatteForm = () => {
       milkChoice: "",
       milkFoam: "",
       drinkSyrup: "",
-      drinkSweetener: "",
+      DrinkSweetner: "",
       espressoShots: "",
       toppings: "",
       custId: ""
@@ -49,7 +49,7 @@ export const LatteForm = () => {
                 MilkChoice: latte.milkChoice,
                 MilkFoam: latte.milkFoam,
                 DrinkSyrup: latte.drinkSyrup,
-                DrinkSweetener: latte.drinkSweetener,
+                DrinkSweetner: latte.DrinkSweetner,
                 EspressoShots: latte.espressoShots,
                 Toppings: latte.toppings,
                 CustId: +customerId
@@ -64,7 +64,7 @@ export const LatteForm = () => {
                 MilkChoice: latte.milkChoice,
                 MilkFoam: latte.milkFoam,
                 DrinkSyrup: latte.drinkSyrup,
-                DrinkSweetener: latte.drinkSweetener,
+                DrinkSweetner: latte.DrinkSweetner,
                 EspressoShots: latte.espressoShots,
                 Toppings: latte.toppings,
                 CustId: +customerId
@@ -174,10 +174,10 @@ export const LatteForm = () => {
           </fieldset>
           <fieldset>
             <div className="drink-from-group">
-              <label htmlFor="drinkSweetener">Any sweetener?: </label>
-              <select id="drinkSweetener" name="drinkSweetener" required className="drink-form-control"
+              <label htmlFor="DrinkSweetner">Any sweetener?: </label>
+              <select id="DrinkSweetner" name="DrinkSweetner" required className="drink-form-control"
               onChange={handleControlledInputChange}
-              value={latte.drinkSweetener}>
+              value={latte.DrinkSweetner}>
                 <option hidden>Select a sweetener...</option>
                 <option>Stevia</option>
                 <option>Honey</option>

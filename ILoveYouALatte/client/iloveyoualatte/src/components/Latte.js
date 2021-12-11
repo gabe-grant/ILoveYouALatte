@@ -19,7 +19,7 @@ const Latte = ({ order }) => {
               <p>{order.milkChoice}</p>
               <p>{order.milkFoam}</p>
               <p>{order.drinkSyrup}</p>
-              <p>{order.drinkSweetener}</p>
+              <p>{order.DrinkSweetner}</p>
               <p>{order.espressoShots}</p>
               <p>{order.toppings}</p>
               <button onClick={() => {
