@@ -2,7 +2,19 @@ ul {
     list-style: none;
 }
 
+li {
+    padding: 10%;
+    display: inline-block;
+}
+
+#rewardsPoints {
+    padding: 2.5%;
+}
+
 #nav-bar {
-    border: black 1px dotted;
+    border: black 1px solid;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
 }
 

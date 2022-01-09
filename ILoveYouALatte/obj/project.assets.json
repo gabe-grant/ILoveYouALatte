@@ -2568,11 +2568,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bulta\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
+      "projectUniqueName": "C:\\Users\\bulta\\workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
       "projectName": "ILoveYouALatte",
-      "projectPath": "C:\\Users\\bulta\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
+      "projectPath": "C:\\Users\\bulta\\workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
       "packagesPath": "C:\\Users\\bulta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bulta\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\obj\\",
+      "outputPath": "C:\\Users\\bulta\\workspace\\ILoveYouALatte\\ILoveYouALatte\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bulta\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2640,7 +2640,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

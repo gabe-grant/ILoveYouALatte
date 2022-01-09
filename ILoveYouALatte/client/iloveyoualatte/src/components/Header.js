@@ -17,7 +17,7 @@ export default function Header() {
       <div>
         
         <nav id="nav-bar">
-          <section>
+          <section id='rewardsPoints'>
             {isLoggedIn ? drinkorders.length * 10 : <></>}
           </section>
           {isLoggedIn &&

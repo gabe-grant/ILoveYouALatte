@@ -1,0 +1,7 @@
+#drink-order-delete {
+    border: black 1px dotted;
+    flex: auto;
+    flex-direction: column;
+    margin: auto 35%; 
+    padding: 1.5%;
+}
