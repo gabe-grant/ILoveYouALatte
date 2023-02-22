@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bulta\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj": {}
+    "C:\\Users\\bulta\\source\\repos\\gabe-grant\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bulta\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj": {
+    "C:\\Users\\bulta\\source\\repos\\gabe-grant\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bulta\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
+        "projectUniqueName": "C:\\Users\\bulta\\source\\repos\\gabe-grant\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
         "projectName": "ILoveYouALatte",
-        "projectPath": "C:\\Users\\bulta\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
+        "projectPath": "C:\\Users\\bulta\\source\\repos\\gabe-grant\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
         "packagesPath": "C:\\Users\\bulta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bulta\\Workspace\\ILoveYouALatte\\ILoveYouALatte\\obj\\",
+        "outputPath": "C:\\Users\\bulta\\source\\repos\\gabe-grant\\ILoveYouALatte\\ILoveYouALatte\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bulta\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,7 +67,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -79,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

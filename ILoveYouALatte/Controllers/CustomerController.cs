@@ -5,7 +5,7 @@ using ILoveYouALatte.Repositories;
 
 namespace ILoveYouALatte.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
@@ -31,7 +31,6 @@ namespace ILoveYouALatte.Controllers
         public IActionResult Register(Customer customer)
         {
             // All newly registered users start out as a "user" user type (i.e. they are not admins)
-            
             _customerRepository.Add(customer);
             return CreatedAtAction(
                 nameof(GetByFirebaseUserId), new { custFirebaseId = customer.CustFirebaseId }, customer);
