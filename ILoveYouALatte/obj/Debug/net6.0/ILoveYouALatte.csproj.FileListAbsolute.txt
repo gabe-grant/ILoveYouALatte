@@ -183,3 +183,4 @@ C:\Users\bulta\Source\Repos\gabe-grant\ILoveYouALatte\ILoveYouALatte\obj\Debug\n
 C:\Users\bulta\Source\Repos\gabe-grant\ILoveYouALatte\ILoveYouALatte\obj\Debug\net6.0\ILoveYouALatte.pdb
 C:\Users\bulta\Source\Repos\gabe-grant\ILoveYouALatte\ILoveYouALatte\obj\Debug\net6.0\ILoveYouALatte.genruntimeconfig.cache
 C:\Users\bulta\Source\Repos\gabe-grant\ILoveYouALatte\ILoveYouALatte\obj\Debug\net6.0\ref\ILoveYouALatte.dll
+C:\Users\bulta\source\repos\gabe-grant\ILoveYouALatte\ILoveYouALatte\bin\Debug\net6.0\libman.json
