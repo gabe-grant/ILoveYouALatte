@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eOwffCxEBsEgkziXPg+3Hn6IH6cqyPiLcitKqWiETbbaniEUFPdT3v6mKKLUJ6mx7XNh/qtePrmtjM0PUNmlFw==",
+  "dgSpecHash": "n7235I9xIVYE2JBUe95zV4Au6iI2t5pMpvoGi94hxGcLMD2oAWgZGzUBFhtxq+CRF+r31085IzfODebw3gzXtw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bulta\\source\\repos\\gabe-grant\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
+  "projectFilePath": "C:\\Users\\bulta\\source\\repos\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bulta\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\bulta\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",

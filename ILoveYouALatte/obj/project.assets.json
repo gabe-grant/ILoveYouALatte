@@ -2722,11 +2722,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bulta\\source\\repos\\gabe-grant\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
+      "projectUniqueName": "C:\\Users\\bulta\\source\\repos\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
       "projectName": "ILoveYouALatte",
-      "projectPath": "C:\\Users\\bulta\\source\\repos\\gabe-grant\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
+      "projectPath": "C:\\Users\\bulta\\source\\repos\\ILoveYouALatte\\ILoveYouALatte\\ILoveYouALatte.csproj",
       "packagesPath": "C:\\Users\\bulta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bulta\\source\\repos\\gabe-grant\\ILoveYouALatte\\ILoveYouALatte\\obj\\",
+      "outputPath": "C:\\Users\\bulta\\source\\repos\\ILoveYouALatte\\ILoveYouALatte\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bulta\\AppData\\Roaming\\NuGet\\NuGet.Config",
