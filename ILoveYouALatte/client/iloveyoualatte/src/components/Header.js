@@ -1,4 +1,4 @@
-import React, { useState, useContext, useHistory, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { CustomerContext } from "../providers/CustomerProvider";
 import { DrinkOrderContext } from '../providers/DrinkOrderProvider';
 import { Link } from "react-router-dom"
@@ -6,7 +6,7 @@ import './Header.css';
 
 export default function Header() {
   const { isLoggedIn, logout } = useContext(CustomerContext);
-  const { getAllDrinkOrders, drinkorders } = useContext(DrinkOrderContext);
+  const { drinkorders } = useContext(DrinkOrderContext);
   
 
   // "ConnectionStrings": {

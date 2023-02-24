@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { DrinkOrderContext } from "../providers/DrinkOrderProvider";
 import Latte from "./Latte";
 
@@ -9,7 +9,7 @@ export const DrinkOrderList = () => {
 
   useEffect(() => {
     getAllDrinkOrders()
-  }, []);
+  });
 
   return (
         <div id='drink-order-list'>

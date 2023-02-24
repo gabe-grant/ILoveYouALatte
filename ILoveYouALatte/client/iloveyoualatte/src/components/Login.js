@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
-import { useHistory, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { CustomerContext } from "../providers/CustomerProvider";
 import './Login.css';
 
 
 export default function Login() {
-  const history = useHistory();
+  const history = useNavigate();
   const { login } = useContext(CustomerContext);
 
   const [email, setEmail] = useState();

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { CustomerContext } from "../providers/CustomerProvider";
 import Login from "./Login";
 import { DrinkCard } from "./DrinkCard";
@@ -13,33 +13,16 @@ export default function ApplicationViews() {
 
   return (
     <main>
-      <Switch>
+      <Routes>
         
-        <Route path="/login">
-          <Login />
-        </Route>
-
-        <Route exact path="/">
-          <DrinkCard />
-        </Route>
-
-        <Route exact path="/latte">
-          {isLoggedIn ? <LatteForm /> : <Redirect to="/login" />}
-        </Route>
-
-        <Route path="/history" exact>
-          {isLoggedIn ? <DrinkOrderList /> : <Redirect to="/login" />}
-        </Route>
-
-        <Route path="/edit/:drinkOrderId(\d+)">
-          {isLoggedIn ? <LatteForm /> : <Redirect to="/login" />}
-        </Route>
-
-        <Route path="/delete/:orderId">
-          {isLoggedIn ? <DrinkOrderDelete /> : <Redirect to="/login" />}
-        </Route>
-
-      </Switch>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<DrinkCard />} />
+        <Route path="/latte" element={isLoggedIn ? <LatteForm /> : <Navigate to="/login" />} />
+        <Route path="/history" element={isLoggedIn ? <DrinkOrderList /> : <Navigate to="/login" />} />
+        <Route path="/edit/:drinkOrderId(\d+)" element={isLoggedIn ? <LatteForm /> : <Navigate to="/login" />} />
+        <Route path="/delete/:orderId" element={isLoggedIn ? <DrinkOrderDelete /> : <Navigate to="/login" />}/>
+          
+      </Routes>
     </main>
   );
 };

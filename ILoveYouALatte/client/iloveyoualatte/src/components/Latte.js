@@ -1,12 +1,12 @@
 import React from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Login from "./Login";
 // import { Link } from "react-router-dom";
 
 const Latte = ({ order }) => {
   
   const customerId = JSON.parse(sessionStorage.getItem("customer")).id;
-  const history = useHistory();
+  const history = useNavigate();
   
   
   return ( 

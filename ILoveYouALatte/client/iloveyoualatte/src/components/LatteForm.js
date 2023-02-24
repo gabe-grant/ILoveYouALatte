@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 import { DrinkOrderContext } from "../providers/DrinkOrderProvider"
 import "./LatteForm.css"
-import { useHistory, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 
 export const LatteForm = () => {
@@ -21,7 +21,7 @@ export const LatteForm = () => {
 
     const [isLoading, setIsLoading] = useState(true);
     const {drinkOrderId} = useParams();
-	  const history = useHistory();
+	  const history = useNavigate();
 
     const handleControlledInputChange = (event) => {
 
@@ -87,7 +87,7 @@ export const LatteForm = () => {
       } else {
         setIsLoading(false)
       }
-      }, [])
+      })
 
 
     return (
