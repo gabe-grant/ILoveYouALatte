@@ -8,18 +8,18 @@ import './DrinkOrderDelete.css';
 export const DrinkOrderDelete = () => {
   const { deleteDrinkOrder, getDrinkOrder } = useContext(DrinkOrderContext);
   const [order, setOrder] = useState({});
-  const history = useNavigate();
+  const navigate = useNavigate();
   const {orderId} = useParams();
 
   console.log(orderId)
   useEffect(() => {
     getDrinkOrder(orderId).then(setOrder);
-  }, []);
+  }, [orderId,getDrinkOrder]);
 
   const handleDelete = () => {
     deleteDrinkOrder(order.id)
       .then(() => {
-        history.push("/history")
+        navigate("/history")
       })
   }
 
@@ -28,7 +28,7 @@ export const DrinkOrderDelete = () => {
       <p>Are you sure you want to delete this order?</p>
       <button onClick={handleDelete}>Confirm Delete</button>
       <button onClick={() => {
-        history.push("/history")
+        navigate("/history")
       }}>Cancel</button>
     </div>
   );

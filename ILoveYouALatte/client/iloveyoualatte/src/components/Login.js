@@ -5,7 +5,7 @@ import './Login.css';
 
 
 export default function Login() {
-  const history = useNavigate();
+  const navigate = useNavigate();
   const { login } = useContext(CustomerContext);
 
   const [email, setEmail] = useState();
@@ -15,7 +15,7 @@ export default function Login() {
     e.preventDefault();
     console.log(email,password);
     login(email, password)
-      .then(() => history.push("/"))
+      .then(() => navigate("/"))
       .catch(() => alert("Invalid email or password"));
   };
 

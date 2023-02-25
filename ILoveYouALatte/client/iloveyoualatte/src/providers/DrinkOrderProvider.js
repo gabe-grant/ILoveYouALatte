@@ -2,7 +2,6 @@ import React, { useState, useContext, createContext } from "react"
 import { CustomerContext } from "./CustomerProvider"
 
 
-
 export const DrinkOrderContext = createContext()
 
 export const DrinkOrderProvider = (props) => {

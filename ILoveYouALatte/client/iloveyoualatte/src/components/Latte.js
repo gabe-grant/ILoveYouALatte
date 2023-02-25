@@ -6,8 +6,7 @@ import Login from "./Login";
 const Latte = ({ order }) => {
   
   const customerId = JSON.parse(sessionStorage.getItem("customer")).id;
-  const history = useNavigate();
-  
+  const navigate = useNavigate();
   
   return ( 
     <section>
@@ -19,14 +18,14 @@ const Latte = ({ order }) => {
               <p>{order.milkChoice}</p>
               <p>{order.milkFoam}</p>
               <p>{order.drinkSyrup}</p>
-              <p>{order.DrinkSweetner}</p>
+              <p>{order.sweetener}</p>
               <p>{order.espressoShots}</p>
               <p>{order.toppings}</p>
               <button onClick={() => {
-                history.push(`/delete/${order.id}`)
+                navigate(`/delete/${order.id}`)
               }}>Delete Order</button>
               <button onClick={() => {
-                history.push(`/edit/${order.id}`)
+                navigate(`/edit/${order.id}`)
               }}>Edit Order</button>
             </>
           ) : (

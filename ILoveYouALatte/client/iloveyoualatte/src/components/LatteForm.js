@@ -13,7 +13,7 @@ export const LatteForm = () => {
       milkChoice: "",
       milkFoam: "",
       drinkSyrup: "",
-      DrinkSweetner: "",
+      sweetener: "",
       espressoShots: "",
       toppings: "",
       custId: ""
@@ -21,15 +21,15 @@ export const LatteForm = () => {
 
     const [isLoading, setIsLoading] = useState(true);
     const {drinkOrderId} = useParams();
-	  const history = useNavigate();
+	  const navigate = useNavigate();
 
     const handleControlledInputChange = (event) => {
 
       const newLatte = { ...latte }
       newLatte[event.target.name] = event.target.value
       setLatte(newLatte)
-    }
 
+    }
 
     const customerId = JSON.parse(sessionStorage.getItem("customer")).id
 
@@ -38,7 +38,7 @@ export const LatteForm = () => {
       if (latte.drinkSize === "" || latte.hotOrIced === ""){
           window.alert("Please select a size and hot or iced!")
       } else {
-        //disable the button - no extra clicks to fuck shit up
+        //disable the button - no extra clicks
         setIsLoading(true);
         if (drinkOrderId){
           //"PUT" method from the context provider -UPDATE
@@ -49,13 +49,13 @@ export const LatteForm = () => {
                 MilkChoice: latte.milkChoice,
                 MilkFoam: latte.milkFoam,
                 DrinkSyrup: latte.drinkSyrup,
-                DrinkSweetner: latte.DrinkSweetner,
+                Sweetener: latte.sweetener,
                 EspressoShots: latte.espressoShots,
                 Toppings: latte.toppings,
                 CustId: +customerId
           })
           //pushes a new entry onto the history stack
-          .then(() => history.push(`/history`))
+          .then(() => navigate(`/history`))
         } else {
           console.log(latte)
           addDrinkOrder({
@@ -64,7 +64,7 @@ export const LatteForm = () => {
                 MilkChoice: latte.milkChoice,
                 MilkFoam: latte.milkFoam,
                 DrinkSyrup: latte.drinkSyrup,
-                DrinkSweetner: latte.DrinkSweetner,
+                Sweetener: latte.sweetener,
                 EspressoShots: latte.espressoShots,
                 Toppings: latte.toppings,
                 CustId: +customerId
@@ -72,7 +72,7 @@ export const LatteForm = () => {
             
             //pushes a new entry onto the history stack
             .then(getAllDrinkOrders)
-            .then(() => history.push("/"))
+            .then(() => navigate("/"))
           }
         }
       } 
@@ -87,7 +87,7 @@ export const LatteForm = () => {
       } else {
         setIsLoading(false)
       }
-      })
+      }, [drinkOrderId, getDrinkOrder])
 
 
     return (
@@ -174,10 +174,10 @@ export const LatteForm = () => {
           </fieldset>
           <fieldset>
             <div className="drink-from-group">
-              <label htmlFor="DrinkSweetner">Any sweetener?: </label>
-              <select id="DrinkSweetner" name="DrinkSweetner" required className="drink-form-control"
+              <label htmlFor="sweetener">Any sweetener?: </label>
+              <select id="sweetener" name="sweetener" required className="drink-form-control"
               onChange={handleControlledInputChange}
-              value={latte.DrinkSweetner}>
+              value={latte.sweetener}>
                 <option hidden>Select a sweetener...</option>
                 <option>Stevia</option>
                 <option>Honey</option>

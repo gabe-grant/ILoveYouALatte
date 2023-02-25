@@ -23,7 +23,7 @@ namespace ILoveYouALatte.Repositories
                 {
                     cmd.CommandText = @"
        
-                    SELECT Id, DrinkSize, MilkFoam, HotOrIced, MilkChoice, DrinkSyrup, DrinkSweetner, EspressoShots, Toppings, CustId
+                    SELECT Id, DrinkSize, MilkFoam, HotOrIced, MilkChoice, DrinkSyrup, Sweetener, EspressoShots, Toppings, CustId
 
                     FROM DrinkOrder";
 
@@ -40,7 +40,7 @@ namespace ILoveYouALatte.Repositories
                             HotOrIced = DbUtils.GetString(reader, "HotOrIced"),
                             MilkChoice = DbUtils.GetString(reader, "MilkChoice"),
                             DrinkSyrup = DbUtils.GetString(reader, "DrinkSyrup"),
-                            DrinkSweetner = DbUtils.GetString(reader, "DrinkSweetner"),
+                            Sweetener = DbUtils.GetString(reader, "Sweetener"),
                             EspressoShots = DbUtils.GetString(reader, "EspressoShots"),
                             Toppings = DbUtils.GetString(reader, "Toppings"),
                             CustId = DbUtils.GetInt(reader, "CustId")
@@ -66,16 +66,16 @@ namespace ILoveYouALatte.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                        INSERT INTO DrinkOrder (DrinkSize, MilkFoam, HotOrIced, MilkChoice, DrinkSyrup, DrinkSweetner, EspressoShots, Toppings, CustId)
+                        INSERT INTO DrinkOrder (DrinkSize, MilkFoam, HotOrIced, MilkChoice, DrinkSyrup, Sweetener, EspressoShots, Toppings, CustId)
                         OUTPUT INSERTED.ID
-                        VALUES (@DrinkSize, @MilkFoam, @HotOrIced, @MilkChoice, @DrinkSyrup, @DrinkSweetner, @EspressoShots, @Toppings, @CustId)";
+                        VALUES (@DrinkSize, @MilkFoam, @HotOrIced, @MilkChoice, @DrinkSyrup, @Sweetener, @EspressoShots, @Toppings, @CustId)";
 
                     DbUtils.AddParameter(cmd, "@DrinkSize", drinkOrder.DrinkSize);
                     DbUtils.AddParameter(cmd, "@HotOrIced", drinkOrder.HotOrIced);
                     DbUtils.AddParameter(cmd, "@MilkChoice", drinkOrder.MilkChoice);
                     DbUtils.AddParameter(cmd, "@MilkFoam", drinkOrder.MilkFoam);
                     DbUtils.AddParameter(cmd, "@DrinkSyrup", drinkOrder.DrinkSyrup);
-                    DbUtils.AddParameter(cmd, "@DrinkSweetner", drinkOrder.DrinkSweetner);
+                    DbUtils.AddParameter(cmd, "@Sweetener", drinkOrder.Sweetener);
                     DbUtils.AddParameter(cmd, "@EspressoShots", drinkOrder.EspressoShots);
                     DbUtils.AddParameter(cmd, "@Toppings", drinkOrder.Toppings);
                     DbUtils.AddParameter(cmd, "@CustId", drinkOrder.CustId);
@@ -93,7 +93,7 @@ namespace ILoveYouALatte.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                    SELECT do.Id AS Id, do.DrinkSize, do.HotOrIced, do.MilkChoice, do.MilkFoam, do.DrinkSyrup, do.DrinkSweetner, do.EspressoShots, do.Toppings, do.CustId
+                    SELECT do.Id AS Id, do.DrinkSize, do.HotOrIced, do.MilkChoice, do.MilkFoam, do.DrinkSyrup, do.Sweetener, do.EspressoShots, do.Toppings, do.CustId
 
                     FROM DrinkOrder do
 
@@ -114,7 +114,7 @@ namespace ILoveYouALatte.Repositories
                             MilkChoice = DbUtils.GetString(reader, "MilkChoice"),
                             MilkFoam = DbUtils.GetString(reader, "MilkFoam"),
                             DrinkSyrup = DbUtils.GetString(reader, "DrinkSyrup"),
-                            DrinkSweetner = DbUtils.GetString(reader, "DrinkSweetner"),
+                            Sweetener = DbUtils.GetString(reader, "Sweetener"),
                             EspressoShots = DbUtils.GetString(reader, "EspressoShots"),
                             Toppings = DbUtils.GetString(reader, "Toppings"),
                             CustId = DbUtils.GetInt(reader, "CustId")
@@ -146,7 +146,7 @@ namespace ILoveYouALatte.Repositories
                                MilkChoice = @MilkChoice,
                                MilkFoam = @MilkFoam,
                                DrinkSyrup = @DrinkSyrup,
-                               DrinkSweetner = @DrinkSweetner,
+                               Sweetener = @Sweetener,
                                EspressoShots = @EspressoShots,
                                Toppings = @Toppings,
                                CustId = @CustId
@@ -156,7 +156,7 @@ namespace ILoveYouALatte.Repositories
                     DbUtils.AddParameter(cmd, "@HotOrIced", post.HotOrIced);
                     DbUtils.AddParameter(cmd, "@MilkChoice", post.MilkChoice);
                     DbUtils.AddParameter(cmd, "@DrinkSize", post.DrinkSize);
-                    DbUtils.AddParameter(cmd, "@DrinkSweetner", post.DrinkSweetner);
+                    DbUtils.AddParameter(cmd, "@Sweetener", post.Sweetener);
                     DbUtils.AddParameter(cmd, "@DrinkSyrup", post.DrinkSyrup);
                     DbUtils.AddParameter(cmd, "@MilkFoam", post.MilkFoam);
                     DbUtils.AddParameter(cmd, "@Toppings", post.Toppings);

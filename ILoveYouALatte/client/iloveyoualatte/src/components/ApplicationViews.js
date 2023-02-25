@@ -16,10 +16,15 @@ export default function ApplicationViews() {
       <Routes>
         
         <Route path="/login" element={<Login />} />
+
         <Route path="/" element={<DrinkCard />} />
+
         <Route path="/latte" element={isLoggedIn ? <LatteForm /> : <Navigate to="/login" />} />
+
         <Route path="/history" element={isLoggedIn ? <DrinkOrderList /> : <Navigate to="/login" />} />
-        <Route path="/edit/:drinkOrderId(\d+)" element={isLoggedIn ? <LatteForm /> : <Navigate to="/login" />} />
+
+        <Route path="/edit/:drinkOrderId" element={isLoggedIn ? <LatteForm /> : <Navigate to="/login" />} />
+
         <Route path="/delete/:orderId" element={isLoggedIn ? <DrinkOrderDelete /> : <Navigate to="/login" />}/>
           
       </Routes>
