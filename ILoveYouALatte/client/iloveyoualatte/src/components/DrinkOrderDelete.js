@@ -6,12 +6,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 import './DrinkOrderDelete.css';
 
 export const DrinkOrderDelete = () => {
+
   const { deleteDrinkOrder, getDrinkOrder } = useContext(DrinkOrderContext);
   const [order, setOrder] = useState({});
   const navigate = useNavigate();
   const {orderId} = useParams();
 
-  console.log(orderId)
+  
   useEffect(() => {
     getDrinkOrder(orderId).then(setOrder);
   }, [orderId,getDrinkOrder]);

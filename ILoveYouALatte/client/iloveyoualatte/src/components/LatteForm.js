@@ -57,7 +57,6 @@ export const LatteForm = () => {
           //pushes a new entry onto the history stack
           .then(() => navigate(`/history`))
         } else {
-          console.log(latte)
           addDrinkOrder({
                 DrinkSize: latte.drinkSize, 
                 HotOrIced: latte.hotOrIced,

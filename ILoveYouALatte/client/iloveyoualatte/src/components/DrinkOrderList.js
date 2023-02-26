@@ -5,6 +5,7 @@ import Latte from "./Latte";
 import './DrinkOrderList.css';
 
 export const DrinkOrderList = () => {
+  
   const { drinkorders, getAllDrinkOrders } = useContext(DrinkOrderContext);
 
   useEffect(() => {
@@ -14,9 +15,9 @@ export const DrinkOrderList = () => {
   return (
         <div id='drink-order-list'>
           {drinkorders.map((order) => (
-            <>
-              <Latte key={order.id} order={order} />
-            </>
+            <ul key={order.id}>
+              <Latte order={order} />
+            </ul>
           ))}
         </div>
   );
