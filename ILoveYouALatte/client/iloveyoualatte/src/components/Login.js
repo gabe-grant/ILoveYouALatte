@@ -13,7 +13,6 @@ export default function Login() {
 
   const loginSubmit = (e) => {
     e.preventDefault();
-    console.log(email,password);
     login(email, password)
       .then(() => navigate("/"))
       .catch(() => alert("Invalid email or password"));
